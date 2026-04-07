@@ -1,23 +1,36 @@
 Web
 
-- Inicio
- -Logo de mepresa
+colores principales 
+-Morado
+-Blanco
+
+Barra de busqueda¿?
+Logeo de usuario¿?
+ 
+ Inicio
+ -Logo de empresa
  -"Portada"(imagen)
  -Breve descripción de la empresa 
  -Logos de las marcas que vende
  -Ofertas
  -Productos destacados
+
 Carrito
 Pagina de contacto
  -número de la empresa
  -correo
  -redes
  -ubicación¿?
+
+Pagina sobre nosotros (opcional)
+-Historial de la empresa
+-Valores
+
 Pagina de catalogo
- -Móviles
--Otros productos
+-productos (imagen, descripción, precio, botón de añadir al carro)
+
 enlace a redes sociales
 
 
--Hacer base de datos
+Hacer base de datos
 
