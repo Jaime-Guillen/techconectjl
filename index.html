@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechConectJL - Móviles Reacondicionados</title>
+    <style>
+        
+        :root {
+            --morado-principal: #6a1b9a; 
+            --morado-claro: #f3e5f5;
+            --gris-suave: #f4f4f4;
+            --texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--texto);
+            background-color: var(--gris-suave);
+        }
+
+        /* Cabecera */
+        header {
+            background-color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--morado-principal);
+        }
+
+        .logo h1 {
+            color: var(--morado-principal);
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--texto);
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        /* Banner Principal */
+        .hero {
+            background-color: var(--morado-principal);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* Contenedor de Productos (Catálogo) */
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+        }
+
+        /* Tarjeta de Producto */
+        .producto {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #ddd;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        .grado {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Colores de grados según el PDF */
+        .grado-a { background-color: #d4edda; color: #155724; } /* Excelente */
+        .grado-b { background-color: #fff3cd; color: #856404; } /* Muy bueno */
+        .grado-c { background-color: #f8d7da; color: #721c24; } /* Bueno */
+
+        .precio {
+            font-size: 1.4rem;
+            color: var(--morado-principal);
+            font-weight: bold;
+        }
+
+        .boton-compra {
+            background-color: var(--morado-principal);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            margin-top: 40px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: -20px;
+            margin-top: -20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <img src="img/techconectimg.jpg">
+        </div>
+        <nav>
+            <a href="#">Catálogo</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Carrito (0)</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Tecnología accesible para todos</h2>
+        <p>Móviles reacondicionados con garantía y revisión técnica de 30 puntos.</p>
+    </section>
+
+    <main class="catalogo">
+        <article class="producto">
+            <span class="grado grado-a">Grado A - Excelente</span>
+            <img src="https://via.placeholder.com/200" alt="iPhone 13">
+            <h3>iPhone 13 128GB</h3>
+            <p class="precio">450€</p>
+            <p>Salud de batería: +85%</p>
+            <button class="boton-compra">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <span class="grado grado-b">Grado B - Muy Bueno</span>
+            <img src="https://via.placeholder.com/200" alt="Samsung S21">
+            <h3>Samsung Galaxy S21</h3>
+            <p class="precio">320€</p>
+            <p>100% Funcional</p>
+            <button class="boton-compra">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <span class="grado grado-c">Grado C - Bueno</span>
+            <img src="https://via.placeholder.com/200" alt="Xiaomi Mi 11">
+            <h3>Xiaomi Mi 11 Lite</h3>
+            <p class="precio">180€</p>
+            <p>Marcas visibles, gran ahorro</p>
+            <button class="boton-compra">Añadir al carrito</button>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechConectJL Dos Hermanas, Sevilla</p>
+        <p>Contribuyendo a la economía circular y la sostenibilidad</p>
+    </footer>
+
+</body>
+</html>
