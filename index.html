@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechConectJL - Móviles Reacondicionados</title>
+    <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
     <style>
-        
         :root {
             --morado-principal: #6a1b9a; 
             --morado-claro: #f3e5f5;
             --gris-suave: #f4f4f4;
+            --gris-texto: #888;
             --texto: #333;
         }
 
@@ -52,7 +53,7 @@
             padding: 40px 20px;
         }
 
-        /* Contenedor de Productos (Catálogo) */
+        /* Contenedor de Productos */
         .catalogo {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -90,15 +91,28 @@
             margin-bottom: 10px;
         }
 
-        /* Colores de grados según el PDF */
-        .grado-a { background-color: #d4edda; color: #155724; } /* Excelente */
-        .grado-b { background-color: #fff3cd; color: #856404; } /* Muy bueno */
-        .grado-c { background-color: #f8d7da; color: #721c24; } /* Bueno */
+        .grado-a { background-color: #d4edda; color: #155724; }
+        .grado-b { background-color: #fff3cd; color: #856404; }
+        .grado-c { background-color: #f8d7da; color: #721c24; }
+
+        /* Estilos de Precio */
+        .contenedor-precio {
+            margin: 10px 0;
+        }
 
         .precio {
             font-size: 1.4rem;
             color: var(--morado-principal);
             font-weight: bold;
+            display: inline-block;
+        }
+
+        .precio-antes {
+            font-size: 0.9rem;
+            color: var(--gris-texto);
+            text-decoration: line-through;
+            margin-left: 10px;
+            font-weight: normal;
         }
 
         .boton-compra {
@@ -119,24 +133,25 @@
             margin-top: 40px;
         }
 
-        img {
+        header img {
             width: 200px;
-            height: 200px;
-            margin-bottom: -20px;
+            height: auto;
             margin-top: -20px;
+            margin-bottom: -20px;
         }
+        /* El -20px es para la separación, era muy grande y lo que hacemos con esto es achicarla */
     </style>
 </head>
 <body>
 
     <header>
         <div>
-            <img src="img/techconectimg.jpg">
+            <img src="img/techconectimg.jpg" alt="Logo TechConectJL">
         </div>
         <nav>
             <a href="#">Catálogo</a>
             <a href="#">Sobre Nosotros</a>
-            <a href="#">Contcto</a>
+            <a href="#">Contacto</a>
             <a href="#">Carrito (0)</a>
         </nav>
     </header>
@@ -146,13 +161,15 @@
         <p>Móviles reacondicionados con garantía y revisión técnica de 30 puntos.</p>
     </section>
 
-    <!--Catálogo de Productos. Aquí añadimos productos mediante el <article> siguiendo su orden--> 
     <main class="catalogo">
         <article class="producto">
             <span class="grado grado-a">Grado A - Excelente</span><br><br>
             <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg" alt="iPhone 13"><br><br>
             <h3>iPhone 13 128GB</h3>
-            <p class="precio">450€</p>
+            <div class="contenedor-precio">
+                <span class="precio">450€</span>
+                <span class="precio-antes">585€</span>
+            </div>
             <p>Salud de batería: +85%</p>
             <button class="boton-compra">Añadir al carrito</button>
         </article>
@@ -161,7 +178,10 @@
             <span class="grado grado-b">Grado B - Muy Bueno</span><br><br>
             <img src="https://m.media-amazon.com/images/I/81IWsqrVMTL._AC_UF1000,1000_QL80_.jpg" alt="Samsung S21"><br><br>
             <h3>Samsung Galaxy S21</h3>
-            <p class="precio">320€</p>
+            <div class="contenedor-precio">
+                <span class="precio">320€</span>
+                <span class="precio-antes">415€</span>
+            </div>
             <p>100% Funcional</p>
             <button class="boton-compra">Añadir al carrito</button>
         </article>
@@ -170,17 +190,21 @@
             <span class="grado grado-c">Grado C - Bueno</span><br><br>
             <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1617015539.48364882.png" alt="Xiaomi Mi 11"><br><br>
             <h3>Xiaomi Mi 11 Lite</h3>
-            <p class="precio">180€</p>
+            <div class="contenedor-precio">
+                <span class="precio">180€</span>
+                <span class="precio-antes">235€</span>
+            </div>
             <p>Marcas visibles, gran ahorro</p>
             <button class="boton-compra">Añadir al carrito</button>
         </article>
+
+        <!-- Esto son ejemplos, pero como he dicho antes, solo copia el formato del <article> para añadir productos en función de sus características -->
     </main>
 
     <footer>
         <p>&copy; 2026 TechConectJL Dos Hermanas, Sevilla</p>
         <p>Contribuyendo a la economía circular y la sostenibilidad</p>
     </footer>
-
 
 </body>
 </html>
