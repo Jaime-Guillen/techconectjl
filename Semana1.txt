@@ -1,6 +1,14 @@
 Inicio
+"Portada"
+Breve descripción de la empresa 
+marcas
 -Ofertas
 -Productos destacados
-Carito
+Carrito
 Pagina de contacto
+ - su correo
+-redes
+-mapa¿?
 Pagina de catalogo
+enlace a redes sociales
+comentario de los clientes (opcional)
