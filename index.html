@@ -45,6 +45,14 @@
             font-weight: bold;
         }
 
+        nav a.activo {
+            background-color: var(--morado-claro); /* Fondo lila suave */
+            color: var(--morado-principal);       /* Texto en morado oscuro */
+            padding: 8px 15px;                   /* Espacio interno para que parezca un botón */
+            border-radius: 20px;                 /* Bordes redondeados */
+            transition: all 0.3s ease;           /* Animación suave */
+        }
+
         /* Banner Principal */
         .hero {
             background-color: var(--morado-principal);
@@ -149,7 +157,7 @@
             <img src="img/techconectimg.jpg" alt="Logo TechConectJL">
         </div>
         <nav>
-            <a href="index.html">Catálogo</a>
+            <a href="index.html" class="activo">Catálogo</a>
             <a href="sobrenosotros.html">Sobre Nosotros</a>
             <a href="#">Contacto</a>
             <a href="#">Carrito (0)</a>
