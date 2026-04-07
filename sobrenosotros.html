@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - TechConectJL</title>
+    <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
+    <style>
+        /* Mantenemos tus variables y estilos base para que no cambie el diseño */
+        :root {
+            --morado-principal: #6a1b9a; 
+            --morado-claro: #f3e5f5;
+            --gris-suave: #f4f4f4;
+            --gris-texto: #888;
+            --texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--texto);
+            background-color: var(--gris-suave);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--morado-principal);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--texto);
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: var(--morado-principal);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* Estilos específicos para la sección de Historia */
+        .contenido-nosotros {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contenido-nosotros h2 {
+            color: var(--morado-principal);
+            border-bottom: 2px solid var(--morado-claro);
+            padding-bottom: 10px;
+        }
+
+        .mision-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .cuadro {
+            background-color: var(--morado-claro);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            margin-top: 40px;
+        }
+
+        header img {
+            width: 200px;
+            height: auto;
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <a href="index.html"><img src="img/techconectimg.jpg" alt="Logo TechConectJL"></a>
+        </div>
+        <nav>
+            <a href="index.html">Catálogo</a>
+            <a href="sobrenostros.html">Sobre Nosotros</a>
+            <a href="#">Contacto</a>
+            <a href="#">Carrito (0)</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Nuestra Historia</h2>
+        <p>Pasión por la tecnología y compromiso con el planeta.</p>
+    </section>
+
+    <main class="contenido-nosotros">
+        <h2>Desde Dos Hermanas para el mundo</h2>
+        <p>
+            TechConectJL nació en el corazón de <strong>Dos Hermanas, Sevilla</strong>, con una idea clara: 
+            darle una segunda vida a los dispositivos móviles que aún tienen mucho que ofrecer. 
+            Lo que empezó como un pequeño taller técnico, se ha convertido en un referente de la 
+            economía circular en la provincia.
+        </p>
+
+        <p>
+            Creemos que estrenar un móvil no debería costar una fortuna ni dañar el medio ambiente. 
+            Por eso, cada dispositivo que pasa por nuestras manos se somete a un riguroso test de 
+            30 puntos para asegurar que recibas un producto de calidad "como nuevo".
+        </p>
+
+        <div class="mision-vision">
+            <div class="cuadro">
+                <h3>Nuestra Misión</h3>
+                <p>Democratizar el acceso a la tecnología de alta gama de forma sostenible.</p>
+            </div>
+            <div class="cuadro">
+                <h3>Nuestros Valores</h3>
+                <p>Transparencia en el grado estético, garantía real y atención cercana.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechConectJL Dos Hermanas, Sevilla</p>
+        <p>Contribuyendo a la economía circular y la sostenibilidad</p>
+    </footer>
+
+</body>
+</html>
