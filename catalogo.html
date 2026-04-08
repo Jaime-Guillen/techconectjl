@@ -198,6 +198,10 @@
             margin-top: 40px;
             border-top: 1px solid #ddd;
         }
+
+        h2{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -212,7 +216,7 @@
             <a href="catalogo.html" class="activo">Catálogo</a>
             <a href="sobrenosotros.html">Sobre Nosotros</a>
             <a href="contacto.html">Contacto</a>
-            <a href="carrito.html">Carrito (0)</a>
+            <a href="carrito.html">Carrito (<span id="contador-carrito">0</span>)</a>
         </nav>
     </header>
 
@@ -235,7 +239,7 @@
                 </div>
                 <p>Salud de batería: +85%</p>
             </div>
-            <button class="boton-compra">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -249,7 +253,7 @@
                 </div>
                 <p>100% Funcional</p>
             </div>
-            <button class="boton-compra">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -264,7 +268,7 @@
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
         </article>
     </main>
     <h2>Ordenadores</h2>
@@ -277,5 +281,17 @@
     </footer>
 
 </body>
+
+<script>
+    // Creamos una variable para guardar la cantidad de productos
+    let cantidadCarrito = 0;
+
+    function añadirAlCarrito() {
+        cantidadCarrito++;
+        const contador = document.getElementById('contador-carrito');
+        contador.innerText = cantidadCarrito;
+        alert("Producto añadido. Total: " + cantidadCarrito);
+    }
+</script>
 
 </html>
