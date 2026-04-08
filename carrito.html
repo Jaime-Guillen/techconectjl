@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - TechConectJL</title>
+    <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
+    <style>
+        :root {
+            --morado-principal: #6a1b9a; 
+            --morado-claro: #f3e5f5;
+            --gris-suave: #f4f4f4;
+            --gris-texto: #888;
+            --texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--texto);
+            background-color: var(--gris-suave);
+        }
+
+        /* --- CABECERA --- */
+        header {
+            background-color: white;
+            padding: 0.8rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--morado-principal);
+        }
+
+        header img {
+            width: 200px;
+            height: auto;
+            display: block;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--texto);
+            padding: 8px 15px;
+            font-weight: bold;
+        }
+
+        nav a.activo {
+            background-color: var(--morado-claro);
+            color: var(--morado-principal);
+            border-radius: 20px;
+        }
+
+        /* --- CONTENIDO DEL CARRITO --- */
+        .contenedor-carrito {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--morado-principal); margin-bottom: 30px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th {
+            text-align: left;
+            border-bottom: 2px solid var(--morado-claro);
+            padding: 15px;
+            color: var(--morado-principal);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .producto-info { display: flex; align-items: center; gap: 15px; }
+        .producto-info img { width: 60px; height: 60px; object-fit: contain; }
+
+        .total-container {
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            padding-top: 20px;
+            border-top: 2px solid var(--gris-suave);
+        }
+
+        /* --- BOTONES --- */
+        .acciones-carrito {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .btn-finalizar {
+            background-color: var(--morado-principal);
+            color: white;
+        }
+
+        .btn-finalizar:hover { opacity: 0.9; }
+
+        .btn-seguir {
+            background-color: white;
+            color: var(--morado-principal);
+            border: 2px solid var(--morado-principal);
+        }
+
+        .btn-seguir:hover {
+            background-color: var(--morado-claro);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .acciones-carrito { flex-direction: column; }
+            .btn { width: 100%; }
+            th:nth-child(2), td:nth-child(2) { display: none; } /* Oculta cantidad en móviles muy pequeños */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="img/techconectimg.jpg" alt="Logo TechConectJL"></a>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="sobrenosotros.html">Sobre Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html" class="activo">Carrito (1)</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-carrito">
+        <h2>Tu Carrito de Compra</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="producto-info">
+                            <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg" alt="iPhone 13">
+                            <span>iPhone 13 128GB (Grado A)</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>450€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total-container">
+            Total: 450€
+        </div>
+
+        <div class="acciones-carrito">
+            <a href="catalogo.html" class="btn btn-seguir">Seguir Comprando</a>
+            <button class="btn btn-finalizar" onclick="alert('¡Gracias por tu compra! Te redirigiremos a la pasarela de pago.')">Finalizar Compra</button>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; color: var(--gris-texto);">
+        <p>&copy; 2026 TechConectJL - Dos Hermanas, Sevilla</p>
+    </footer>
+
+</body>
+</html>
