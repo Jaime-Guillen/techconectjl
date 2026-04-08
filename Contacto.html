@@ -18,42 +18,50 @@
             margin: 0;
             color: var(--texto);
             background-color: var(--gris-suave);
+            overflow-x: hidden;
         }
 
-        /* Cabecera */
+        /* --- CABECERA RESPONSIVE --- */
         header {
             background-color: white;
-            padding: 1rem 5%;
+            padding: 0.8rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             border-bottom: 3px solid var(--morado-principal);
+            flex-wrap: wrap; /* Permite que el menú baje en móviles */
         }
 
         header img {
             width: 200px;
             height: auto;
-            margin-top: -20px;
-            margin-bottom: -20px;
+            display: block;
+            margin: 10px 0; /* Espaciado limpio sin márgenes negativos */
+        }
+
+        nav {
+            display: flex;
+            gap: 5px;
+            align-items: center;
         }
 
         nav a {
             text-decoration: none;
             color: var(--texto);
-            margin-left: 20px;
+            padding: 8px 15px;
             font-weight: bold;
+            font-size: 0.95rem;
+            transition: 0.3s;
         }
 
         nav a.activo {
             background-color: var(--morado-claro);
             color: var(--morado-principal);
-            padding: 8px 15px;
             border-radius: 20px;
-            transition: all 0.3s ease;
         }
 
-        /* Banner Principal */
+        /* --- HERO --- */
         .hero {
             background-color: var(--morado-principal);
             color: white;
@@ -61,18 +69,19 @@
             padding: 40px 20px;
         }
 
-        /* Layout de Contacto */
+        .hero h2 { margin: 0; font-size: 2rem; }
+
+        /* --- LAYOUT DE CONTACTO --- */
         .contenedor-contacto {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            padding: 50px 10%;
+            gap: 30px;
+            padding: 40px 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Columna de Info */
-        .info-contacto {
+        .info-contacto, .formulario-contacto {
             background: white;
             padding: 30px;
             border-radius: 10px;
@@ -83,107 +92,66 @@
             color: var(--morado-principal);
             border-bottom: 2px solid var(--morado-claro);
             padding-bottom: 10px;
+            margin-top: 0;
         }
 
-        .metodo-contacto {
-            margin: 20px 0;
+        /* --- MAPA --- */
+        .seccion-mapa {
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        .contenedor-mapa {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .metodo-contacto span {
-            font-weight: bold;
-            color: var(--morado-principal);
-        }
-
-        /* Instagram */
-        .instagram-link {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            color: #E1306C; /* Color Instagram */
-            font-weight: bold;
-            margin-top: 10px;
-            transition: transform 0.3s;
-        }
-
-        .instagram-link:hover {
-            transform: scale(1.05);
-        }
-
-        .instagram-link img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        /* Formulario */
-        .formulario-contacto {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .formulario-contacto label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .formulario-contacto input, 
-        .formulario-contacto textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-            box-sizing: border-box; /* Evita que se salga del contenedor */
-        }
-
-        .formulario-contacto textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .boton-enviar {
-            background-color: var(--morado-principal);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: opacity 0.3s;
-        }
-
-        .boton-enviar:hover {
-            opacity: 0.9;
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            nav {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                font-size: 0.85rem;
+                padding: 6px 10px;
+            }
+            .hero h2 { font-size: 1.5rem; }
+            .contenedor-contacto { padding: 20px 5%; }
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background: white;
             margin-top: 40px;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div>
+        <div class="logo-container">
             <a href="index.html"><img src="img/techconectimg.jpg" alt="Logo TechConectJL"></a>
         </div>
         <nav>
             <a href="index.html">Inicio</a>
             <a href="catalogo.html">Catálogo</a>
             <a href="sobrenosotros.html">Sobre Nosotros</a>
-            <a class="activo">Contacto</a>
+            <a href="contacto.html" class="activo">Contacto</a>
             <a href="#">Carrito (0)</a>
         </nav>
     </header>
@@ -199,19 +167,14 @@
             <h3>Atención al Cliente</h3>
             <p>Estamos en Dos Hermanas, Sevilla, listos para ayudarte con tu nuevo terminal.</p>
             
-            <div class="metodo-contacto">
-                <span>📞 Teléfono:</span> +34 644 903 041
-            </div>
-            
-            <div class="metodo-contacto">
-                <span>📧 Correo:</span> techconectjl@gmail.com
-            </div>
+            <p><strong>📞 Teléfono:</strong> +34 644 903 041</p>
+            <p><strong>📧 Correo:</strong> techconectjl@gmail.com</p>
 
             <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
 
             <h3>Síguenos</h3>
-            <a href="https://www.instagram.com/techconectjl/" target="_blank" class="instagram-link">
-                <img src="https://static.vecteezy.com/system/resources/previews/018/930/415/original/instagram-logo-instagram-icon-transparent-free-png.png" alt="Instagram">
+            <a href="https://www.instagram.com/techconectjl/" target="_blank" style="text-decoration:none; color:#E1306C; font-weight:bold; display:flex; align-items:center; gap:10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="30" alt="Instagram">
                 @techconectjl
             </a>
         </div>
@@ -219,31 +182,33 @@
         <div class="formulario-contacto">
             <h3>Envíanos un mensaje</h3>
             <form id="formContacto">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" placeholder="Tu nombre..." required>
+                <label style="display:block; margin-bottom:5px; font-weight:bold;">Nombre</label>
+                <input type="text" id="nombre" placeholder="Tu nombre..." style="width:100%; padding:12px; margin-bottom:20px; border:1px solid #ddd; border-radius:5px; box-sizing:border-box;" required>
 
-                <label for="mensaje">¿En qué podemos ayudarte?</label>
-                <textarea id="mensaje" placeholder="Escribe tu duda aquí..." required></textarea>
+                <label style="display:block; margin-bottom:5px; font-weight:bold;">¿En qué podemos ayudarte?</label>
+                <textarea id="mensaje" placeholder="Escribe tu duda aquí..." style="width:100%; padding:12px; height:120px; border:1px solid #ddd; border-radius:5px; box-sizing:border-box; resize:vertical;" required></textarea>
 
-                <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                <button type="submit" style="background:var(--morado-principal); color:white; border:none; padding:15px; border-radius:5px; width:100%; font-weight:bold; cursor:pointer;">Enviar Mensaje</button>
             </form>
         </div>
-        
-
     </main>
 
-    <h3 class="hero" style="text-align: center";>Dónde encontrarnos</h3>
-
-<div style="display:flex; justify-content:center;">
-  <iframe
-        src="https://www.google.com/maps/embed?pb=!4v1775632778512!6m8!1m7!1sJf69cDTQnukQ0lFy5yOQWw!2m2!1d37.29063118115521!2d-5.926536533565422!3f223.61737!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-
-    style="width:100%; max-width:600px; height:450px; border:0;">
-  </iframe>
-</div>
+    <div class="seccion-mapa">
+        <h3 style="color:var(--morado-principal);">Dónde encontrarnos</h3>
+        <div class="contenedor-mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.622543956323!2d-5.9329!3d37.2829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd12719669532599%3A0x6739669641753177!2sDos%20Hermanas%2C%20Sevilla!5e0!3m2!1ses!2ses!4v1710000000000" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2026 TechConectJL Dos Hermanas, Sevilla</p>
+        <p>© 2026 TechConectJL - Dos Hermanas, Sevilla</p>
     </footer>
 
 </body>

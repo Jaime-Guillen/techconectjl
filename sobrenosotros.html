@@ -6,7 +6,6 @@
     <title>Sobre Nosotros - TechConectJL</title>
     <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
     <style>
-        /* Mantenemos tus variables y estilos base para que no cambie el diseño */
         :root {
             --morado-principal: #6a1b9a; 
             --morado-claro: #f3e5f5;
@@ -21,43 +20,63 @@
             color: var(--texto);
             background-color: var(--gris-suave);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
+        /* --- CABECERA RESPONSIVE (Igual que Inicio y Contacto) --- */
         header {
             background-color: white;
-            padding: 1rem 5%;
+            padding: 0.8rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             border-bottom: 3px solid var(--morado-principal);
+            flex-wrap: wrap; 
+        }
+
+        header img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 5px;
+            align-items: center;
         }
 
         nav a {
             text-decoration: none;
             color: var(--texto);
-            margin-left: 20px;
+            padding: 8px 15px;
             font-weight: bold;
+            font-size: 0.95rem;
+            transition: 0.3s;
         }
 
         nav a.activo {
-            background-color: var(--morado-claro); /* Fondo lila suave */
-            color: var(--morado-principal);       /* Texto en morado oscuro */
-            padding: 8px 15px;                   /* Espacio interno para que parezca un botón */
-            border-radius: 20px;                 /* Bordes redondeados */
-            transition: all 0.3s ease;           /* Animación suave */
+            background-color: var(--morado-claro);
+            color: var(--morado-principal);
+            border-radius: 20px;
         }
 
+        /* --- HERO --- */
         .hero {
             background-color: var(--morado-principal);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
-        /* Estilos específicos para la sección de Historia */
+        .hero h2 { margin: 0; font-size: 2.5rem; }
+
+        /* --- CONTENIDO --- */
         .contenido-nosotros {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 40px;
             background: white;
@@ -69,6 +88,7 @@
             color: var(--morado-principal);
             border-bottom: 2px solid var(--morado-claro);
             padding-bottom: 10px;
+            margin-top: 0;
         }
 
         .mision-vision {
@@ -80,43 +100,74 @@
 
         .cuadro {
             background-color: var(--morado-claro);
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .cuadro:hover {
+            transform: translateY(-5px);
+        }
+
+        .cuadro h3 {
+            color: var(--morado-principal);
+            margin-top: 0;
+        }
+
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            nav {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                padding: 6px 10px;
+                font-size: 0.85rem;
+            }
+            .hero h2 { font-size: 1.8rem; }
+            .contenido-nosotros {
+                margin: 20px 5%;
+                padding: 25px;
+            }
+            .mision-vision {
+                grid-template-columns: 1fr; /* Una sola columna en móvil */
+            }
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background: white;
-            margin-top: 40px;
-        }
-
-        header img {
-            width: 200px;
-            height: auto;
-            margin-top: -20px;
-            margin-bottom: -20px;
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div>
-            <a href="index.html"><img src="img/techconectimg.jpg" alt="Logo TechConectJL"></a>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/techconectimg.jpg" alt="Logo TechConectJL">
+            </a>
         </div>
         <nav>
             <a href="index.html">Inicio</a>
             <a href="catalogo.html">Catálogo</a>
-            <a class="activo">Sobre Nosotros</a>
-            <a href="Contacto.html">Contacto</a>
+            <a href="sobrenosotros.html" class="activo">Sobre Nosotros</a>
+            <a href="contacto.html">Contacto</a>
             <a href="#">Carrito (0)</a>
         </nav>
     </header>
 
     <section class="hero">
         <h2>Nuestra Historia</h2>
-        <p>Pasión por la tecnología y compromiso con el planeta.</p>
+        <p>Pasión por la tecnología y compromiso con el planeta desde Sevilla.</p>
     </section>
 
     <main class="contenido-nosotros">
@@ -137,17 +188,17 @@
         <div class="mision-vision">
             <div class="cuadro">
                 <h3>Nuestra Misión</h3>
-                <p>Democratizar el acceso a la tecnología de alta gama de forma sostenible.</p>
+                <p>Democratizar el acceso a la tecnología de alta gama de forma sostenible y asequible para todos.</p>
             </div>
             <div class="cuadro">
                 <h3>Nuestros Valores</h3>
-                <p>Transparencia en el grado estético, garantía real y atención cercana.</p>
+                <p>Transparencia total, garantía de confianza y una atención al cliente cercana y profesional.</p>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 TechConectJL Dos Hermanas, Sevilla</p>
+        <p>&copy; 2026 TechConectJL - Dos Hermanas, Sevilla</p>
         <p>Contribuyendo a la economía circular y la sostenibilidad</p>
     </footer>
 

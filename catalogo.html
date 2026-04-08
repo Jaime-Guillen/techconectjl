@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechConectJL - Móviles Reacondicionados</title>
+    <title>Catálogo - TechConectJL</title>
     <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
     <style>
         :root {
@@ -19,41 +19,51 @@
             margin: 0;
             color: var(--texto);
             background-color: var(--gris-suave);
+            overflow-x: hidden;
         }
 
-        /* Cabecera */
+        /* --- CABECERA RESPONSIVE --- */
         header {
             background-color: white;
-            padding: 1rem 5%;
+            padding: 0.8rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             border-bottom: 3px solid var(--morado-principal);
+            flex-wrap: wrap; 
         }
 
-        .logo h1 {
-            color: var(--morado-principal);
-            margin: 0;
-            font-size: 1.5rem;
+        header img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 5px;
+            align-items: center;
         }
 
         nav a {
             text-decoration: none;
             color: var(--texto);
-            margin-left: 20px;
+            padding: 8px 15px;
             font-weight: bold;
+            font-size: 0.95rem;
+            transition: 0.3s;
         }
 
         nav a.activo {
-            background-color: var(--morado-claro); /* Fondo lila suave */
-            color: var(--morado-principal);       /* Texto en morado oscuro */
-            padding: 8px 15px;                   /* Espacio interno para que parezca un botón */
-            border-radius: 20px;                 /* Bordes redondeados */
-            transition: all 0.3s ease;           /* Animación suave */
+            background-color: var(--morado-claro);
+            color: var(--morado-principal);
+            border-radius: 20px;
         }
 
-        /* Banner Principal */
+        /* --- HERO --- */
         .hero {
             background-color: var(--morado-principal);
             color: white;
@@ -61,104 +71,121 @@
             padding: 40px 20px;
         }
 
-        /* Contenedor de Productos */
+        .hero h2 { margin: 0; font-size: 2rem; }
+
+        /* --- CATÁLOGO RESPONSIVE --- */
         .catalogo {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
             padding: 40px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* Tarjeta de Producto */
         .producto {
             background: white;
-            border-radius: 10px;
-            padding: 15px;
+            border-radius: 15px;
+            padding: 20px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .producto:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
         .producto img {
             max-width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: contain;
+            margin: 15px 0;
         }
 
         .grado {
             display: inline-block;
-            padding: 3px 10px;
+            padding: 4px 12px;
             border-radius: 15px;
             font-size: 0.8rem;
             font-weight: bold;
-            margin-bottom: 10px;
         }
 
         .grado-a { background-color: #d4edda; color: #155724; }
         .grado-b { background-color: #fff3cd; color: #856404; }
         .grado-c { background-color: #f8d7da; color: #721c24; }
 
-        /* Estilos de Precio */
-        .contenedor-precio {
-            margin: 10px 0;
-        }
-
         .precio {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             color: var(--morado-principal);
             font-weight: bold;
-            display: inline-block;
         }
 
         .precio-antes {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--gris-texto);
             text-decoration: line-through;
             margin-left: 10px;
-            font-weight: normal;
         }
 
         .boton-compra {
             background-color: var(--morado-principal);
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px;
+            border-radius: 8px;
             cursor: pointer;
             width: 100%;
-            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: opacity 0.3s;
+        }
+
+        .boton-compra:hover {
+            opacity: 0.9;
+        }
+
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            nav {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                padding: 6px 10px;
+                font-size: 0.85rem;
+            }
+            .hero h2 { font-size: 1.5rem; }
+            .catalogo { padding: 20px 5%; }
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background: white;
             margin-top: 40px;
+            border-top: 1px solid #ddd;
         }
-
-        header img {
-            width: 200px;
-            height: auto;
-            margin-top: -20px;
-            margin-bottom: -20px;
-        }
-        /* El -20px es para la separación, era muy grande y lo que hacemos con esto es achicarla */
     </style>
 </head>
 <body>
 
     <header>
-        <div>
-            <img src="img/techconectimg.jpg" alt="Logo TechConectJL">
+        <div class="logo-container">
+            <a href="index.html"><img src="img/techconectimg.jpg" alt="Logo TechConectJL"></a>
         </div>
         <nav>
             <a href="index.html">Inicio</a>
-            <a class="activo">Catálogo</a>
+            <a href="catalogo.html" class="activo">Catálogo</a>
             <a href="sobrenosotros.html">Sobre Nosotros</a>
             <a href="Contacto.html">Contacto</a>
             <a href="#">Carrito (0)</a>
@@ -172,46 +199,50 @@
 
     <main class="catalogo">
         <article class="producto">
-            <span class="grado grado-a">Grado A - Excelente</span><br><br>
-            <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg" alt="iPhone 13"><br><br>
-            <h3>iPhone 13 128GB</h3>
-            <div class="contenedor-precio">
-                <span class="precio">450€</span>
-                <span class="precio-antes">585€</span>
+            <div>
+                <span class="grado grado-a">Grado A - Excelente</span>
+                <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg" alt="iPhone 13">
+                <h3>iPhone 13 128GB</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">450€</span>
+                    <span class="precio-antes">585€</span>
+                </div>
+                <p>Salud de batería: +85%</p>
             </div>
-            <p>Salud de batería: +85%</p>
             <button class="boton-compra">Añadir al carrito</button>
         </article>
 
         <article class="producto">
-            <span class="grado grado-b">Grado B - Muy Bueno</span><br><br>
-            <img src="https://m.media-amazon.com/images/I/81IWsqrVMTL._AC_UF1000,1000_QL80_.jpg" alt="Samsung S21"><br><br>
-            <h3>Samsung Galaxy S21</h3>
-            <div class="contenedor-precio">
-                <span class="precio">320€</span>
-                <span class="precio-antes">415€</span>
+            <div>
+                <span class="grado grado-b">Grado B - Muy Bueno</span>
+                <img src="https://m.media-amazon.com/images/I/81IWsqrVMTL._AC_UF1000,1000_QL80_.jpg" alt="Samsung S21">
+                <h3>Samsung Galaxy S21</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">320€</span>
+                    <span class="precio-antes">415€</span>
+                </div>
+                <p>100% Funcional</p>
             </div>
-            <p>100% Funcional</p>
             <button class="boton-compra">Añadir al carrito</button>
         </article>
 
         <article class="producto">
-            <span class="grado grado-c">Grado C - Bueno</span><br><br>
-            <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1617015539.48364882.png" alt="Xiaomi Mi 11"><br><br>
-            <h3>Xiaomi Mi 11 Lite</h3>
-            <div class="contenedor-precio">
-                <span class="precio">180€</span>
-                <span class="precio-antes">235€</span>
+            <div>
+                <span class="grado grado-c">Grado C - Bueno</span>
+                <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1617015539.48364882.png" alt="Xiaomi Mi 11">
+                <h3>Xiaomi Mi 11 Lite</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">180€</span>
+                    <span class="precio-antes">235€</span>
+                </div>
+                <p>Marcas visibles, gran ahorro</p>
             </div>
-            <p>Marcas visibles, gran ahorro</p>
             <button class="boton-compra">Añadir al carrito</button>
         </article>
-
-        <!-- Esto son ejemplos, pero como he dicho antes, solo copia el formato del <article> para añadir productos en función de sus características -->
     </main>
 
     <footer>
-        <p>&copy; 2026 TechConectJL Dos Hermanas, Sevilla</p>
+        <p>&copy; 2026 TechConectJL - Dos Hermanas, Sevilla</p>
         <p>Contribuyendo a la economía circular y la sostenibilidad</p>
     </footer>
 
