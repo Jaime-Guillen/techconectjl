@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
     <style>
         :root {
-            --morado-principal: #6a1b9a; 
+            --morado-principal: #6a1b9a;
             --morado-claro: #f3e5f5;
             --gris-suave: #f4f4f4;
             --gris-texto: #888;
@@ -29,9 +30,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-bottom: 3px solid var(--morado-principal);
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             position: sticky;
             top: 0;
         }
@@ -71,7 +72,10 @@
             padding: 40px 20px;
         }
 
-        .hero h2 { margin: 0; font-size: 2rem; }
+        .hero h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
 
         /* --- CATÁLOGO RESPONSIVE --- */
         .catalogo {
@@ -97,7 +101,7 @@
 
         .producto:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         .producto img {
@@ -115,9 +119,20 @@
             font-weight: bold;
         }
 
-        .grado-a { background-color: #d4edda; color: #155724; }
-        .grado-b { background-color: #fff3cd; color: #856404; }
-        .grado-c { background-color: #f8d7da; color: #721c24; }
+        .grado-a {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .grado-b {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .grado-c {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
 
         .precio {
             font-size: 1.6rem;
@@ -155,17 +170,25 @@
                 flex-direction: column;
                 padding: 1rem;
             }
+
             nav {
                 margin-top: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
+
             nav a {
                 padding: 6px 10px;
                 font-size: 0.85rem;
             }
-            .hero h2 { font-size: 1.5rem; }
-            .catalogo { padding: 20px 5%; }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .catalogo {
+                padding: 20px 5%;
+            }
         }
 
         footer {
@@ -177,6 +200,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -196,12 +220,14 @@
         <h2>Tecnología accesible para todos</h2>
         <p>Móviles reacondicionados con garantía y revisión técnica.</p>
     </section>
-
+    <h2>Móviles</h2>
     <main class="catalogo">
+
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Excelente</span>
-                <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg" alt="iPhone 13">
+                <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg"
+                    alt="iPhone 13">
                 <h3>iPhone 13 128GB</h3>
                 <div class="contenedor-precio">
                     <span class="precio">450€</span>
@@ -229,7 +255,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado C - Bueno</span><br>
-                <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1617015539.48364882.png" alt="Xiaomi Mi 11">
+                <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1617015539.48364882.png"
+                    alt="Xiaomi Mi 11">
                 <h3>Xiaomi Mi 11 Lite</h3>
                 <div class="contenedor-precio">
                     <span class="precio">180€</span>
@@ -240,6 +267,9 @@
             <button class="boton-compra">Añadir al carrito</button>
         </article>
     </main>
+    <h2>Ordenadores</h2>
+    <h2>Relojes</h2>
+    <h2>Accesorios</h2>
 
     <footer>
         <p>&copy; 2026 TechConectJL - Dos Hermanas, Sevilla</p>
@@ -247,4 +277,5 @@
     </footer>
 
 </body>
+
 </html>
