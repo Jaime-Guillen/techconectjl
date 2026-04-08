@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
     <style>
         :root {
-            --morado-principal: #6a1b9a; 
+            --morado-principal: #6a1b9a;
             --morado-claro: #f3e5f5;
             --gris-suave: #f4f4f4;
             --gris-texto: #888;
@@ -29,10 +30,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-bottom: 3px solid var(--morado-principal);
             z-index: 1000;
-            flex-wrap: wrap; /* Para responsive */
+            flex-wrap: wrap;
+            /* Para responsive */
         }
 
         /* Ajuste de imagen para que coincida con contacto */
@@ -66,8 +68,8 @@
 
         /* Hero Section */
         .hero-home {
-            background: linear-gradient(rgba(106, 27, 154, 0.7), rgba(106, 27, 154, 0.7)), 
-                        url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1500&auto=format&fit=crop');
+            background: linear-gradient(rgba(106, 27, 154, 0.7), rgba(106, 27, 154, 0.7)),
+                url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1500&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             color: white;
@@ -75,9 +77,16 @@
             padding: 80px 20px;
         }
 
-        .hero-home h1 { font-size: 2.8rem; margin: 0; }
-        .hero-home p { font-size: 1.2rem; margin: 20px 0 30px; }
-        
+        .hero-home h1 {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        .hero-home p {
+            font-size: 1.2rem;
+            margin: 20px 0 30px;
+        }
+
         .btn-cta {
             background-color: white;
             color: var(--morado-principal);
@@ -157,15 +166,41 @@
                 flex-direction: column;
                 padding: 1rem;
             }
+
             nav {
                 margin-top: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            .hero-home h1 { font-size: 2rem; }
+
+            .hero-home h1 {
+                font-size: 2rem;
+            }
+        }
+
+
+        .card {
+            display: block;
+            width: 200px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -190,11 +225,32 @@
     </section>
 
     <main class="ofertas-container">
-        <h2 class="titulo-seccion">🔥 Ofertas Destacadas</h2>
-        
+        <h2 class="titulo-seccion">Nuestros Porductos</h2>
+
+        <div style="display:flex; gap:20px;">
+
+            <a href="#moviles" class="card">
+                <img src="img/mobile.jpg">
+                <h3>Móviles</h3>
+            </a>
+
+            <a href="#ordenadores" class="card">
+                <img src="pc.jpg">
+                <h3>Ordenadores</h3>
+            </a>
+
+        </div>
+
+
+
+
+
+        <br><h2 class="titulo-seccion">🔥 Ofertas Destacadas</h2>
+
         <div class="grid-ofertas">
             <article class="tarjeta-oferta">
-                <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg" alt="iPhone 13">
+                <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg"
+                    alt="iPhone 13">
                 <h3>iPhone 13 128GB</h3>
                 <p>Grado A - Excelente</p>
                 <div>
@@ -202,7 +258,9 @@
                     <span class="precio-antes">585€</span>
                 </div>
                 <br>
-                <a href="catalogo.html" style="text-decoration:none; background:var(--morado-principal); color:white; padding:10px 20px; border-radius:5px; display:inline-block;">Ver detalles</a>
+                <a href="catalogo.html"
+                    style="text-decoration:none; background:var(--morado-principal); color:white; padding:10px 20px; border-radius:5px; display:inline-block;">Ver
+                    detalles</a>
             </article>
 
             <article class="tarjeta-oferta">
@@ -214,9 +272,14 @@
                     <span class="precio-antes">415€</span>
                 </div>
                 <br>
-                <a href="catalogo.html" style="text-decoration:none; background:var(--morado-principal); color:white; padding:10px 20px; border-radius:5px; display:inline-block;">Ver detalles</a>
+                <a href="catalogo.html"
+                    style="text-decoration:none; background:var(--morado-principal); color:white; padding:10px 20px; border-radius:5px; display:inline-block;">Ver
+                    detalles</a>
             </article>
-        </div>
+        </div><br>
+
+        <h2 class="titulo-seccion">Marcas que vendemos</h2>
+       <img width="150px"  src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-index-content-uploads-10.png">
     </main>
 
     <footer>
@@ -225,4 +288,5 @@
     </footer>
 
 </body>
+
 </html>
