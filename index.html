@@ -7,6 +7,7 @@
     <title>TechConectJL - Inicio</title>
     <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
     <style>
+        
         :root {
             --morado-principal: #6a1b9a;
             --morado-claro: #f3e5f5;
@@ -15,46 +16,45 @@
             --texto: #333;
         }
 
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             color: var(--texto);
             background-color: var(--gris-suave);
-            overflow-x: hidden;
         }
 
-        /* CABECERA (Igual que en contacto) */
+        a {
+            text-decoration: none;
+        }
+
+       
         header {
             background-color: white;
             padding: 0.8rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-bottom: 3px solid var(--morado-principal);
-            z-index: 1000;
-            flex-wrap: wrap;
             position: sticky;
             top: 0;
-            /* Para responsive */
+            z-index: 1000;
         }
 
-        /* Ajuste de imagen para que coincida con contacto */
         header img {
             width: 200px;
             height: auto;
-            display: block;
-            /* Eliminados los márgenes negativos que causaban el desajuste */
         }
 
         nav {
             display: flex;
-            gap: 5px;
-            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         nav a {
-            text-decoration: none;
             color: var(--texto);
             padding: 8px 15px;
             font-weight: bold;
@@ -68,7 +68,7 @@
             border-radius: 20px;
         }
 
-        /* Hero Section */
+        
         .hero-home {
             background: linear-gradient(rgba(106, 27, 154, 0.7), rgba(106, 27, 154, 0.7)),
                 url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1500&auto=format&fit=crop');
@@ -93,11 +93,10 @@
             background-color: white;
             color: var(--morado-principal);
             padding: 15px 35px;
-            text-decoration: none;
             font-weight: bold;
             border-radius: 30px;
-            transition: 0.3s;
             display: inline-block;
+            transition: 0.3s;
         }
 
         .btn-cta:hover {
@@ -105,8 +104,8 @@
             background-color: var(--morado-claro);
         }
 
-        /* Sección Ofertas */
-        .ofertas-container {
+        
+        main {
             padding: 50px 5%;
             max-width: 1200px;
             margin: 0 auto;
@@ -118,10 +117,40 @@
             margin-bottom: 40px;
         }
 
+        
+        .grid-categorias {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            display: block;
+            width: 200px;
+            text-align: center;
+            color: black;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        
         .grid-ofertas {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            margin-bottom: 40px;
         }
 
         .tarjeta-oferta {
@@ -130,7 +159,6 @@
             padding: 20px;
             text-align: center;
             border: 1px solid #eee;
-            position: relative;
             transition: 0.3s;
         }
 
@@ -154,6 +182,31 @@
             margin-left: 10px;
         }
 
+        .btn-detalle {
+            display: inline-block;
+            background: var(--morado-principal);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-detalle:hover {
+            transform: scale(1.05);
+        }
+
+       
+        .marcas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+       
+
+        
         footer {
             background: white;
             text-align: center;
@@ -162,7 +215,7 @@
             border-top: 1px solid #ddd;
         }
 
-        /* RESPONSIVE */
+        
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -170,8 +223,6 @@
             }
 
             nav {
-                margin-top: 15px;
-                flex-wrap: wrap;
                 justify-content: center;
             }
 
@@ -179,38 +230,15 @@
                 font-size: 2rem;
             }
         }
-
-
-        .card {
-            display: block;
-            width: 200px;
-            text-align: center;
-            text-decoration: none;
-            color: black;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .card img {
-            width: 100%;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="img/techconectimg.jpg" alt="Logo TechConectJL">
-            </a>
-        </div>
+        <a href="index.html">
+            <img src="img/techconectimg.jpg" alt="Logo TechConectJL">
+        </a>
         <nav>
             <a href="index.html" class="activo">Inicio</a>
             <a href="catalogo.html">Catálogo</a>
@@ -226,53 +254,39 @@
         <a href="catalogo.html" class="btn-cta">Explorar Catálogo</a>
     </section>
 
-    <main class="ofertas-container">
+    <main>
         <h2 class="titulo-seccion">Nuestros Productos</h2>
-
-        <div style="display:flex; gap:20px;">
-
+        <div class="grid-categorias">
             <a href="#moviles" class="card">
-                <img src="img/mobile.webp">
+                <img src="img/mobile.webp" alt="Móviles">
                 <h3>Móviles</h3>
             </a>
-
             <a href="#ordenadores" class="card">
-                <img src="img/pc.jpg">
+                <img src="img/pc.jpg" alt="Ordenadores">
                 <h3>Ordenadores</h3>
             </a>
-
             <a href="#relojes" class="card">
-                <img src="img/reloj.png">
+                <img src="img/reloj.png" alt="Relojes">
                 <h3>Relojes</h3>
             </a>
-
             <a href="#accesorios" class="card">
-                <img src="img/accesorios.webp">
+                <img src="img/accesorios.webp" alt="Accesorios">
                 <h3>Accesorios</h3>
             </a>
-
+            
         </div>
 
-
-
-
-
-        <br><h2 class="titulo-seccion">🔥 Ofertas Destacadas</h2>
-
+        <h2 class="titulo-seccion">🔥 Ofertas Destacadas</h2>
         <div class="grid-ofertas">
             <article class="tarjeta-oferta">
-                <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg"
-                    alt="iPhone 13">
+                <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg" alt="iPhone 13">
                 <h3>iPhone 13 128GB</h3>
                 <p>Grado A - Excelente</p>
                 <div>
                     <span class="precio-actual">450€</span>
                     <span class="precio-antes">585€</span>
                 </div>
-                <br>
-                <a href="catalogo.html"
-                    style="text-decoration:none; background:var(--morado-principal); color:white; padding:10px 20px; border-radius:5px; display:inline-block;">Ver
-                    detalles</a>
+                <a href="catalogo.html" class="btn-detalle">Ver detalles</a>
             </article>
 
             <article class="tarjeta-oferta">
@@ -283,18 +297,17 @@
                     <span class="precio-actual">320€</span>
                     <span class="precio-antes">415€</span>
                 </div>
-                <br>
-                <a href="catalogo.html"
-                    style="text-decoration:none; background:var(--morado-principal); color:white; padding:10px 20px; border-radius:5px; display:inline-block;">Ver
-                    detalles</a>
+                <a href="catalogo.html" class="btn-detalle">Ver detalles</a>
             </article>
-        </div><br>
+        </div>
 
         <h2 class="titulo-seccion">Marcas que vendemos</h2>
-       <img width="150px"  src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-index-content-uploads-10.png" style="margin: 30px;">
+        <div class="marcas">
+            <img width="150px"  src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-index-content-uploads-10.png" style="margin: 30px;">
        <img width="150px"  src="https://download.logo.wine/logo/Redmi/Redmi-Logo.wine.png" style="margin: 30px;">
        <img width="150px"  src="https://crystalpng.com/wp-content/uploads/2025/05/oppo-logo.png" style="margin: 30px;">
        <img width="250px"  src="https://www.freepnglogos.com/uploads/original-samsung-logo-10.png" style="margin: 30px;">
+        </div>
     </main>
 
     <footer>
