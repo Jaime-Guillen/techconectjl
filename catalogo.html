@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - TechConectJL</title>
     <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
-    <style>
+   <style>
         :root {
             --morado-principal: #6a1b9a;
             --morado-claro: #f3e5f5;
@@ -20,48 +20,47 @@
             margin: 0;
             color: var(--texto);
             background-color: var(--gris-suave);
-            overflow-x: hidden;
         }
 
-        /* --- CABECERA RESPONSIVE --- */
+        /* --- CABECERA COMPACTA --- */
         header {
             background-color: white;
-            padding: 0.8rem 5%;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-bottom: 3px solid var(--morado-principal);
-            flex-wrap: wrap;
             position: sticky;
             top: 0;
+            z-index: 1000;
         }
 
         header img {
-            width: 200px;
+            width: 150px; /* Tamaño equilibrado */
             height: auto;
             display: block;
+            transition: 0.3s;
         }
 
         nav {
             display: flex;
             gap: 5px;
-            align-items: center;
         }
 
         nav a {
             text-decoration: none;
             color: var(--texto);
-            padding: 8px 15px;
+            padding: 8px 12px;
             font-weight: bold;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: 0.3s;
+            border-radius: 20px;
         }
 
         nav a.activo {
             background-color: var(--morado-claro);
             color: var(--morado-principal);
-            border-radius: 20px;
         }
 
         /* --- HERO --- */
@@ -69,140 +68,150 @@
             background-color: var(--morado-principal);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 20px;
         }
 
-        .hero h2 {
-            margin: 0;
-            font-size: 2rem;
+        .hero h2 { margin: 0; font-size: 1.8rem; }
+        .hero p { margin: 10px 0 0; opacity: 0.9; }
+
+        /* --- TITULOS DE SECCIÓN --- */
+        h2[id] {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--morado-principal);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* --- CATÁLOGO RESPONSIVE --- */
         .catalogo {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 40px 5%;
+            /* En móvil se ponen de 2 en 2 si hay espacio, en PC de 3 o 4 */
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            padding: 20px 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .producto {
             background: white;
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 15px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #ddd;
+            border: 1px solid #eee;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: 0.3s;
         }
 
         .producto:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
         .producto img {
-            max-width: 100%;
-            height: 200px;
+            width: 100%;
+            height: 140px; /* Altura fija para que todos los cards midan lo mismo */
             object-fit: contain;
-            margin: 15px 0;
+            margin-bottom: 10px;
+        }
+
+        .producto h3 {
+            font-size: 0.95rem;
+            margin: 10px 0;
+            height: 40px; /* Reserva espacio para 2 líneas de texto */
+            overflow: hidden;
         }
 
         .grado {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
             font-weight: bold;
         }
 
-        .grado-a {
-            background-color: #d4edda;
-            color: #155724;
-        }
-
-        .grado-b {
-            background-color: #fff3cd;
-            color: #856404;
-        }
-
-        .grado-c {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
+        .grado-a { background: #e8f5e9; color: #2e7d32; }
+        .grado-b { background: #fff3e0; color: #ef6c00; }
+        .grado-c { background: #ffebee; color: #c62828; }
 
         .precio {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: var(--morado-principal);
             font-weight: bold;
         }
 
         .precio-antes {
-            font-size: 1rem;
+            font-size: 0.85rem;
             color: var(--gris-texto);
             text-decoration: line-through;
-            margin-left: 10px;
+            margin-left: 5px;
         }
 
         .boton-compra {
             background-color: var(--morado-principal);
             color: white;
             border: none;
-            padding: 12px;
-            border-radius: 8px;
+            padding: 10px;
+            border-radius: 6px;
             cursor: pointer;
             width: 100%;
             font-weight: bold;
-            font-size: 1rem;
-            transition: opacity 0.3s;
+            margin-top: 10px;
+            font-size: 0.85rem;
         }
 
-        .boton-compra:hover {
-            opacity: 0.9;
-        }
-
-        /* --- MEDIA QUERIES --- */
+        /* --- MEDIA QUERIES (EL TRUCO PARA EL MÓVIL) --- */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                padding: 1rem;
+                padding: 8px 2%;
+            }
+
+            header img {
+                width: 110px; /* Logo más pequeño en móvil */
+                margin-bottom: 8px;
             }
 
             nav {
-                margin-top: 15px;
-                flex-wrap: wrap;
+                width: 100%;
                 justify-content: center;
+                overflow-x: auto; /* Permite scroll lateral si el menú no cabe */
+                padding-bottom: 4px;
             }
 
             nav a {
-                padding: 6px 10px;
-                font-size: 0.85rem;
+                padding: 6px 8px;
+                font-size: 0.75rem;
+                white-space: nowrap;
             }
 
-            .hero h2 {
-                font-size: 1.5rem;
-            }
+            .hero { padding: 25px 15px; }
+            .hero h2 { font-size: 1.4rem; }
 
             .catalogo {
-                padding: 20px 5%;
+                grid-template-columns: repeat(2, 1fr); /* FUERZA 2 COLUMNAS EN MÓVIL */
+                gap: 10px;
+                padding: 10px;
             }
+
+            .producto { padding: 10px; }
+            .producto img { height: 110px; }
+            .producto h3 { font-size: 0.85rem; }
+            .precio { font-size: 1.1rem; }
         }
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             background: white;
             margin-top: 40px;
+            font-size: 0.8rem;
             border-top: 1px solid #ddd;
         }
-
-        h2{
-            text-align: center;
-        }
-    </style>
+</style>
 </head>
 
 <body>
