@@ -35,7 +35,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-bottom: 3px solid var(--morado-principal);
             position: sticky;
@@ -44,21 +43,22 @@
         }
 
         header img {
-            width: 200px;
+            width: 180px; /* Reducido un poco de base */
             height: auto;
+            transition: 0.3s;
         }
 
         nav {
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
+            gap: 5px;
         }
 
         nav a {
             color: var(--texto);
-            padding: 8px 15px;
+            padding: 8px 12px;
             font-weight: bold;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            border-radius: 20px;
             transition: 0.3s;
         }
 
@@ -211,16 +211,47 @@
         
         @media (max-width: 768px) {
             header {
-                flex-direction: column;
-                padding: 1rem;
+                padding: 0.5rem 2%; /* Menos relleno para ganar espacio */
+                flex-direction: column; /* Apilamos logo y menú */
+                gap: 10px;
+            }
+
+            header img {
+                width: 130px; /* LOGO MUCHO MÁS PEQUEÑO EN MÓVIL */
             }
 
             nav {
+                width: 100%;
                 justify-content: center;
+                gap: 2px; /* Espacio mínimo entre botones */
+            }
+
+            nav a {
+                padding: 6px 8px; /* Botones más compactos */
+                font-size: 0.75rem; /* Texto más pequeño para que quepa en una línea */
+                white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+            }
+
+            .hero-home {
+                padding: 40px 15px; /* Menos aire en el banner principal */
             }
 
             .hero-home h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            /* Ajuste de logos de marcas para que no ocupen toda la pantalla */
+            .marcas img {
+                width: 80px !important; 
+                margin: 10px !important;
+            }
+        }
+
+        /* Extra para pantallas muy pequeñas (iPhone SE, etc) */
+        @media (max-width: 380px) {
+            nav a {
+                font-size: 0.7rem;
+                padding: 5px 5px;
             }
         }
     </style>
