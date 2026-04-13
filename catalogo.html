@@ -248,7 +248,7 @@
                 </div>
                 <p>Salud de batería: +85%</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPhone 13 128GB', 450)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -262,7 +262,7 @@
                 </div>
                 <p>100% Funcional</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Samsung Galaxy S21', 320)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -277,7 +277,7 @@
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi 11 Lite', 180)">Añadir al carrito</button>
         </article>
     </main>
     <h2 id="ordenador">Ordenadores</h2>
@@ -293,7 +293,7 @@
                     <span class="precio-antes">1560€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('MacBook Pro 13', 1200)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -306,7 +306,7 @@
                     <span class="precio-antes">1399€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('PC Gaming - GREED MK2 AMD', 999)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -319,7 +319,7 @@
                     <span class="precio-antes">599€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
         </article>
 
     </main>
@@ -337,7 +337,7 @@
                     <span class="precio-antes">450€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple Watch Series 6', 350)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -350,7 +350,7 @@
                     <span class="precio-antes">350€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Samsung Galaxy Watch 4', 250)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -363,7 +363,7 @@
                     <span class="precio-antes">180€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
         </article>
 
     </main>
@@ -383,7 +383,7 @@
                 </div>
                 <p>Salud de batería: +85%</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Cascos', 450)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -397,7 +397,7 @@
                 </div>
                 <p>100% Funcional</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Auriculares inalámbrico', 320)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -412,7 +412,7 @@
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito()">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('JBL Tune 720BT', 180)">Añadir al carrito</button>
         </article>
     </main>
     <footer>
@@ -426,12 +426,13 @@
     // Creamos una variable para guardar la cantidad de productos
     let cantidadCarrito = 0;
 
-    function añadirAlCarrito() {
+    function cantidadCarrito() {
         cantidadCarrito++;
         const contador = document.getElementById('contador-carrito');
         contador.innerText = cantidadCarrito;
         alert("Producto añadido. Total: " + cantidadCarrito);
     }
 </script>
+<script type="module" src="app.js"></script>
 
 </html>
