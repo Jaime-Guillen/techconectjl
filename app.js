@@ -3,7 +3,7 @@ import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.g
 
 // Tu configuración de Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyAfnDZYioRYEj6R9p0MEvEzMTRGkVFObKo", // <--- BUSCA ESTO EN TU CONSOLA DE FIREBASE
+  apiKey: "AIzaSyAfnDZYioRYEj6R9p0MEvEzMTRGkVFObKo", 
   authDomain: "techconectjl-6d47e.firebaseapp.com",
   projectId: "techconectjl-6d47e",
   storageBucket: "techconectjl-6d47e.firebasestorage.app",
@@ -15,20 +15,31 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+// --- NUEVO: Variable para el contador visual ---
+let contadorLocal = 0;
+
 // Esta función es la que "atrapa" el clic del botón
 window.añadirAlCarrito = async (nombre, precio) => {
     try {
         console.log(`Guardando en Firebase: ${nombre} - ${precio}€`);
 
-        // Creamos un nuevo documento en la colección "carrito"
+        // 1. Guardar en la base de datos
         const docRef = await addDoc(collection(db, "carrito"), {
             producto: nombre,
             precio: precio,
-            fecha: serverTimestamp() // Esto pone la fecha y hora exacta automáticamente
+            fecha: serverTimestamp() 
         });
 
         console.log("Documento guardado con ID: ", docRef.id);
-        alert("¡Producto añadido al carrito!");
+
+        // --- 2. NUEVO: Actualizar el contador del carrito en el HTML ---
+        contadorLocal++;
+        const elementoContador = document.getElementById('contador-carrito');
+        if (elementoContador) {
+            elementoContador.innerText = contadorLocal;
+        }
+
+        alert(`¡${nombre} añadido al carrito!`);
 
     } catch (error) {
         console.error("Error al añadir al carrito: ", error);
