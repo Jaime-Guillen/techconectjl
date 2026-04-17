@@ -46,3 +46,5 @@ window.añadirAlCarrito = async (nombre, precio) => {
         alert("Error de conexión. Revisa la consola (F12).");
     }
 };
+
+
