@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - TechConectJL</title>
     <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
-   <style>
+    <style>
         :root {
             --morado-principal: #6a1b9a;
             --morado-claro: #f3e5f5;
@@ -37,7 +37,8 @@
         }
 
         header img {
-            width: 150px; /* Tamaño equilibrado */
+            width: 150px;
+            /* Tamaño equilibrado */
             height: auto;
             display: block;
             transition: 0.3s;
@@ -71,8 +72,15 @@
             padding: 30px 20px;
         }
 
-        .hero h2 { margin: 0; font-size: 1.8rem; }
-        .hero p { margin: 10px 0 0; opacity: 0.9; }
+        .hero h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .hero p {
+            margin: 10px 0 0;
+            opacity: 0.9;
+        }
 
         /* --- TITULOS DE SECCIÓN --- */
         h2[id] {
@@ -87,12 +95,13 @@
         /* --- CATÁLOGO RESPONSIVE --- */
         .catalogo {
             display: grid;
-            /* En móvil se ponen de 2 en 2 si hay espacio, en PC de 3 o 4 */
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             padding: 20px 5%;
             max-width: 1200px;
             margin: 0 auto;
+
         }
 
         .producto {
@@ -109,12 +118,13 @@
 
         .producto:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
         .producto img {
             width: 100%;
-            height: 140px; /* Altura fija para que todos los cards midan lo mismo */
+            height: 140px;
+            /* Altura fija para que todos los cards midan lo mismo */
             object-fit: contain;
             margin-bottom: 10px;
         }
@@ -122,7 +132,8 @@
         .producto h3 {
             font-size: 0.95rem;
             margin: 10px 0;
-            height: 40px; /* Reserva espacio para 2 líneas de texto */
+            height: 40px;
+            /* Reserva espacio para 2 líneas de texto */
             overflow: hidden;
         }
 
@@ -133,9 +144,20 @@
             font-weight: bold;
         }
 
-        .grado-a { background: #e8f5e9; color: #2e7d32; }
-        .grado-b { background: #fff3e0; color: #ef6c00; }
-        .grado-c { background: #ffebee; color: #c62828; }
+        .grado-a {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .grado-b {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .grado-c {
+            background: #ffebee;
+            color: #c62828;
+        }
 
         .precio {
             font-size: 1.3rem;
@@ -171,14 +193,16 @@
             }
 
             header img {
-                width: 110px; /* Logo más pequeño en móvil */
+                width: 110px;
+                /* Logo más pequeño en móvil */
                 margin-bottom: 8px;
             }
 
             nav {
                 width: 100%;
                 justify-content: center;
-                overflow-x: auto; /* Permite scroll lateral si el menú no cabe */
+                overflow-x: auto;
+                /* Permite scroll lateral si el menú no cabe */
                 padding-bottom: 4px;
             }
 
@@ -188,19 +212,36 @@
                 white-space: nowrap;
             }
 
-            .hero { padding: 25px 15px; }
-            .hero h2 { font-size: 1.4rem; }
+            .hero {
+                padding: 25px 15px;
+            }
+
+            .hero h2 {
+                font-size: 1.4rem;
+            }
 
             .catalogo {
-                grid-template-columns: repeat(2, 1fr); /* FUERZA 2 COLUMNAS EN MÓVIL */
+                grid-template-columns: repeat(2, 1fr);
+                /* FUERZA 2 COLUMNAS EN MÓVIL */
                 gap: 10px;
                 padding: 10px;
             }
 
-            .producto { padding: 10px; }
-            .producto img { height: 110px; }
-            .producto h3 { font-size: 0.85rem; }
-            .precio { font-size: 1.1rem; }
+            .producto {
+                padding: 10px;
+            }
+
+            .producto img {
+                height: 110px;
+            }
+
+            .producto h3 {
+                font-size: 0.85rem;
+            }
+
+            .precio {
+                font-size: 1.1rem;
+            }
         }
 
         footer {
@@ -211,7 +252,7 @@
             font-size: 0.8rem;
             border-top: 1px solid #ddd;
         }
-</style>
+    </style>
 </head>
 
 <body>
@@ -280,17 +321,16 @@
             <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi 11 Lite', 180)">Añadir al carrito</button>
         </article>
     </main>
-    <h2 id="ordenador">Tablets</h2>
+    <h2 id="Tablets">Tablets</h2>
     <main class="catalogo">
 
         <article class="producto">
             <div>
-                <span class="grado grado-a">Grado A - Excelente</span>
-                <img src="https://www.okamac.com/4122/macbook-pro-13-retina-2017-intel-i5-23-ghz-8-go-ram.jpg" alt="MacBook Pro">
-                <h3>MacBook Pro 13"</h3>
+                <span class="grado grado-a">Grado B+ </span>
+                <img src="img/apple-ipad-109-64gb-wifi-5g-2022-10th-gen-blue.jpg">
+                <h3>Apple iPad 10,9 (2022) 10ª generación 64GB wifi + 5G azul"</h3>
                 <div class="contenedor-precio">
-                    <span class="precio">1200€</span>
-                    <span class="precio-antes">1560€</span>
+                    <span class="precio">280,87€</span>
                 </div>
             </div>
             <button class="boton-compra" onclick="añadirAlCarrito('MacBook Pro 13', 1200)">Añadir al carrito</button>
@@ -298,29 +338,341 @@
 
         <article class="producto">
             <div>
-                <span class="grado grado-b">Grado B - Muy Bueno</span>
-                <img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_166440847?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402">
-                <h3>PC Gaming - GREED MK2 AMD | Gaming Ordenador / Computer, AMD Ryzen 7 5700X, 32 GB RAM, 1000 GB SSD, GeForce RTX™ 5060, Windows 11 Pro, Negro"</h3>
+                <span class="grado grado-b">Grado B+ </span>
+                <img src="img/aipadororosa.jpg">
+                <h3>Apple iPad Air 2 64GB wifi Cellular Oro Rosa</h3>
                 <div class="contenedor-precio">
-                    <span class="precio">999€</span>
-                    <span class="precio-antes">1399€</span>
+                    <span class="precio">590.17€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('PC Gaming - GREED MK2 AMD', 999)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('PC Gaming - GREED MK2 AMD', 999)">Añadir al
+                carrito</button>
         </article>
 
         <article class="producto">
             <div>
-                <span class="grado grado-c">Grado C - Bueno</span><br>
-                <img src="https://ultimainformatica.com/2310653/asus-vivobook-15-f1502za-ej1119w-ordenador-portatil-156-full-hd-intel-core-i7-1255u-8gb-ram-512gb-ssd-iris-xe-graphics-windows.jpg">
-                <h3>ASUS Vivobook 15"</h3>
+                <span class="grado grado-c">Grado B/C</span><br>
+                <img src="img/appleipadair4azul.avif">
+                <h3>Apple iPad Air 4 64GB Wifi + 4G LTE Cellular Azul</h3>
                 <div class="contenedor-precio">
-                    <span class="precio">399€</span>
-                    <span class="precio-antes">599€</span>
+                    <span class="precio">276.52€</span>
                 </div>
             </div>
             <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
         </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B/C</span><br>
+                <img src="img/aipadororosa.jpg">
+                <h3>Apple iPad Air 4 64GB Wifi + 4G LTE Cellular Oro Rosa</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">276.52€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/plata.jpg">
+                <h3>Apple iPad Air 4 64GB Wifi + 4G LTE Cellular Plata</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">285.23€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+         <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/verde.avif">
+                <h3>Apple iPad Air 4 64GB Wifi + 4G LTE Cellular Verde</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">285.23€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/grisespacial.webp">
+                <h3>Apple iPad Air 5 (2022) 64GB Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">354.93€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+         <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/grisespacial.webp">
+                <h3>Apple iPad Air 5 256GB Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">407.20€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/purpura.avif">
+                <h3>Apple iPad Air 5 256GB Púrpura</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">407.20€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/blancoestrella.jpg">
+                <h3>Apple iPad Air 5 64GB Blanco Estrella</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">354.93€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/grisespacial.webp">
+                <h3>Apple iPad Air 5 64GB Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">372.35€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/azul.jpg">
+                <h3>Apple iPad Air 5 64GB Wifi + 5G Cellular Azul</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">420.27€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/grisespacial.webp">
+                <h3>Apple iPad Air 5 64GB Wifi + 5G Cellular Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">367.99€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/purpura.avif">
+                <h3>Apple iPad Air 5 64GB Wifi + 5G Cellular Púrpura</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">367.99€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/rosa.webp">
+                <h3>Apple iPad Air 5 64GB Wifi + 5G Cellular Rosa</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">367.99€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+         <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/miniplata.webp">
+                <h3>Apple iPad Mini 2 16GB Cellular Plata</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">503.04€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/grispro.webp">
+                <h3>Apple iPad Pro 10,5 (2017) 256GB Wifi + 4G Grsi Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">215.53€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/grisespacial11pro.webp">
+                <h3>Apple iPad Pro 11 (2020) 2nd Generación 256GB Wifi + 4G LTE Cellular Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">216.32€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/ipad-pro-11-inch-3rd-gen-11-inch-space-gray-1-9eb4a9e.jpg">
+                <h3>Apple iPad Pro 11 (2021) 3nd Generación 256GB Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">507.39€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/grispro114th.png">
+                <h3>Apple iPad Pro 11 (2022) 4th Generación 128GB Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">585.81€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+          <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/platapro4th.jpg">
+                <h3>Apple iPad Pro 11 (2022) 4th Generación 128GB Plata</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">585.81€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/grispro114th.png">
+                <h3>Apple iPad Pro 11 (2022) 4th Generación 256GB Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">611.94€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        
+        </article>
+         <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/grispro114th.png">
+                <h3>Apple iPad Pro 11 (2022) 4th Generación 256GB Wifi + 5G Cellular Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">638.08€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        </article>
+         <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/negro5th.webp">
+                <h3>Apple iPad Pro 11 (2024) M4 5th Generación 256GB Wifi + 5G Cellular Negro Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">807.98€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+         </article>
+         <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/negro5th.webp">
+                <h3>Apple iPad Pro 11 (2024) M4 5th Generación 512GB Negro Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">842.62€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        </article>
+         <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/gripro12.jpg">
+                <h3>Apple iPad Pro 12,9 (2020) 4th Generación 1TB wifi + 4G LTE Cellular Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">572.74€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+        </article>
+         <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado B+</span><br>
+                <img src="img/gripro12.jpg">
+                <h3>Apple iPad Pro 12,9 (2020) 4th Generación 1TB wifi + 4G LTE Cellular Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">546.60€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+         </article>
+         <article class="producto">
+            <div>
+                <span class="grado grado-c">Grado A</span><br>
+                <img src="img/gris125th.webp">
+                <h3>Apple iPad Pro 12,9 (2020) 4th Generación 128GB  Gris Espacial</h3>
+                <div class="contenedor-precio">
+                    <span class="precio">568.38€</span>
+                </div>
+            </div>
+            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+        </article>
+
+
+
+
+
+
+
+
 
     </main>
     <h2 id="reloj">Smart Wacht</h2>
@@ -337,26 +689,30 @@
                     <span class="precio-antes">450€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple Watch Series 6', 350)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple Watch Series 6', 350)">Añadir al
+                carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B - Muy Bueno</span><br>
-                <img src="https://m.media-amazon.com/images/I/51GlyoACSML._AC_UF1000,1000_QL80_.jpg" alt="Samsung Galaxy Watch">
+                <img src="https://m.media-amazon.com/images/I/51GlyoACSML._AC_UF1000,1000_QL80_.jpg"
+                    alt="Samsung Galaxy Watch">
                 <h3>Samsung Galaxy Watch 4</h3>
                 <div class="contenedor-precio">
                     <span class="precio">250€</span>
                     <span class="precio-antes">350€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Samsung Galaxy Watch 4', 250)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Samsung Galaxy Watch 4', 250)">Añadir al
+                carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado C - Bueno</span><br>
-                <img src="https://m.media-amazon.com/images/I/51xAFog3WmL._AC_UF894,1000_QL80_.jpg" alt="Xiaomi Mi Watch">
+                <img src="https://m.media-amazon.com/images/I/51xAFog3WmL._AC_UF894,1000_QL80_.jpg"
+                    alt="Xiaomi Mi Watch">
                 <h3>Xiaomi Mi Watch</h3>
                 <div class="contenedor-precio">
                     <span class="precio">120€</span>
@@ -369,42 +725,38 @@
     </main>
 
     <h2 id="accesorios">Accesorios</h2>
-     <main class="catalogo">
+    <main class="catalogo">
 
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Excelente</span><br><br>
-                <img src="https://www.beribes.org/wp-content/uploads/2025/07/BERIBES-Bluetooth-Headphones-White-1.webp"
-                    alt="iPhone 13">
-                <h3>Cascos</h3>
+                <img src="img/appleairpods2021estuchemagsafe.webp" alt="Apple Airpods 2021 con estuche MagSafe">
+                <h3>Apple Airpods (2021) con estuche MagSafe</h3>
                 <div class="contenedor-precio">
-                    <span class="precio">450€</span>
-                    <span class="precio-antes">585€</span>
+                    <span class="precio">171,97€</span>
                 </div>
-                <p>Salud de batería: +85%</p>
             </div>
             <button class="boton-compra" onclick="añadirAlCarrito('Cascos', 450)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
-                <span class="grado grado-b">Grado B - Muy Bueno</span><br><br>
-                <img src="https://m.media-amazon.com/images/I/71iaWpqrPgL._AC_.jpg" alt="Auriculares inalámbrico">
-                <h3>Auriculares inalámbrico</h3>
+                <span class="grado grado-b">Grado B+ - Muy Bueno</span><br><br>
+                <img src="img/apple-ipad-109-64gb-wifi-5g-2022-10th-gen-blue.jpg">
+                <h3>Apple iPad 10,9 (2022) 10ª generación 64GB wifi + 5G azul</h3>
                 <div class="contenedor-precio">
-                    <span class="precio">320€</span>
-                    <span class="precio-antes">415€</span>
+                    <span class="precio">280,87€</span>
                 </div>
                 <p>100% Funcional</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Auriculares inalámbrico', 320)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Auriculares inalámbrico', 320)">Añadir al
+                carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado C - Bueno</span><br><br>
-                <img src="https://m.media-amazon.com/images/I/61XvTTfpJpL._AC_SL1500_.jpg"
-                    alt="JBL Tune 720BT">
+                <img src="https://m.media-amazon.com/images/I/61XvTTfpJpL._AC_SL1500_.jpg" alt="JBL Tune 720BT">
                 <h3>JBL Tune 720BT</h3>
                 <div class="contenedor-precio">
                     <span class="precio">180€</span>
