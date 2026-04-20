@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPad Mini 2 - TechConectJL</title>
+    <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
+    <style>
+        :root {
+            --morado-principal: #6a1b9a;
+            --morado-claro: #f3e5f5;
+            --gris-suave: #f4f4f4;
+            --gris-texto: #888;
+            --texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--texto);
+            background-color: var(--gris-suave);
+            line-height: 1.6;
+        }
+
+        /* --- CABECERA --- */
+        header {
+            background-color: white;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid var(--morado-principal);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img { width: 150px; height: auto; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--texto);
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-radius: 20px;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .producto-imagen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .producto-imagen img {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+        }
+
+        /* --- INFO Y DETALLES --- */
+        .volver {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: var(--morado-principal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .grado-badge {
+            display: inline-block;
+            background: #f3e5f5;
+            color: #6a1b9a;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+
+        h1 { color: var(--morado-principal); margin: 0 0 10px 0; font-size: 2rem; }
+
+        .precio-detalle {
+            font-size: 1.8rem;
+            color: var(--morado-principal);
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .especificaciones {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .especificaciones h3 { font-size: 1.1rem; margin-bottom: 15px; color: var(--morado-principal); }
+
+        .especificaciones ul { list-style: none; padding: 0; }
+
+        .especificaciones li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .especificaciones li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--morado-principal);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .boton-compra-detalle {
+            background-color: var(--morado-principal);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .boton-compra-detalle:hover { background-color: #4a148c; }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; margin: 15px; padding: 15px; }
+            header { flex-direction: column; text-align: center; }
+            .producto-imagen img { max-height: 300px; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="img/techconectimg.jpg" alt="Logo TechConectJL"></a>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="sobrenosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="producto-imagen">
+            <img src="img/miniplata.webp" alt="iPad Mini 2">
+        </div>
+
+        <div class="producto-info">
+            <a href="catalogo.html" class="volver">← Volver al catálogo</a>
+            <br>
+            <span class="grado-badge">Grado B+ - Muy Bueno</span>
+            <h1>Apple iPad Mini 2 16GB</h1>
+            <span class="precio-detalle">503,04€</span>
+            
+            <p>El iPad Mini 2 es la opción ideal para quienes buscan la máxima portabilidad. Con su pantalla Retina, ofrece una nitidez increíble en un tamaño que puedes manejar con una sola mano.</p>
+
+            <div class="especificaciones">
+                <h3>Características Técnicas:</h3>
+                <ul>
+                    <li><strong>Pantalla:</strong> Retina de 7,9 pulgadas con resolución de 2.048 por 1.536 píxeles.</li>
+                    <li><strong>Procesador:</strong> Chip A7 con arquitectura de 64 bits y coprocesador de movimiento M7.</li>
+                    <li><strong>Portabilidad:</strong> Diseño ultraligero y compacto, ideal para lectura y viajes.</li>
+                    <li><strong>Cámaras:</strong> Cámara FaceTime HD y cámara iSight de 5 MP.</li>
+                    <li><strong>Conectividad:</strong> Wi-Fi + Cellular (Ranura para tarjeta SIM integrada).</li>
+                    <li><strong>Batería:</strong> Autonomía de larga duración para consumo de contenido multimedia.</li>
+                </ul>
+            </div>
+
+            <button class="boton-compra-detalle" onclick="alert('iPad Mini 2 añadido al carrito')">Añadir al carrito</button>
+            
+            <div style="margin-top: 20px; font-size: 0.85rem; color: #555;">
+                <p>✅ <strong>Revisado:</strong> Funcionamiento garantizado al 100%.</p>
+                <p>📦 <strong>Envío:</strong> Incluye cable de carga y cargador compatible.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechConectJL - Dos Hermanas, Sevilla</p>
+    </footer>
+
+</body>
+</html>
