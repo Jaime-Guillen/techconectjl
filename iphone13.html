@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 13 128GB - TechConectJL</title>
+    <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
+    <style>
+        :root {
+            --morado-principal: #6a1b9a;
+            --morado-claro: #f3e5f5;
+            --gris-suave: #f4f4f4;
+            --gris-texto: #888;
+            --texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--texto);
+            background-color: var(--gris-suave);
+            line-height: 1.6;
+        }
+
+        /* --- CABECERA (Igual a tu catálogo) --- */
+        header {
+            background-color: white;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid var(--morado-principal);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img { width: 150px; height: auto; }
+
+        nav { display: flex; gap: 5px; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--texto);
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-radius: 20px;
+        }
+
+        /* --- CONTENEDOR DETALLE --- */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .producto-imagen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .producto-imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* --- INFO --- */
+        .producto-info h1 {
+            color: var(--morado-principal);
+            margin-top: 0;
+        }
+
+        .grado-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .precio-detalle {
+            font-size: 2rem;
+            color: var(--morado-principal);
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .especificaciones {
+            margin: 25px 0;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .especificaciones h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .especificaciones ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .especificaciones li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .especificaciones li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--morado-principal);
+            font-weight: bold;
+        }
+
+        .boton-compra-detalle {
+            background-color: var(--morado-principal);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .boton-compra-detalle:hover {
+            background-color: #4a148c;
+            transform: scale(1.02);
+        }
+
+        .volver {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--morado-principal);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                margin: 10px;
+            }
+            header { flex-direction: column; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="img/techconectimg.jpg" alt="Logo TechConectJL"></a>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html" class="activo">Catálogo</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="carrito.html">🛒</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="producto-imagen">
+            <img src="img/i13azul.webp" alt="iPhone 13">
+        </div>
+
+        <div class="producto-info">
+            <a href="catalogo.html" class="volver">← Volver al catálogo</a>
+            <br>
+            <span class="grado-badge">Grado A - Excelente Estado</span>
+            <h1>iPhone 13</h1>
+            <p>Este dispositivo ha sido inspeccionado por nuestros técnicos y funciona al 100%. Presenta una estética impecable, casi como nuevo.</p>
+
+            <div class="especificaciones">
+                <h3>Características principales:</h3>
+                <ul>
+                    <li><strong>Pantalla:</strong> Super Retina XDR OLED de 6.1 pulgadas.</li>
+                    <li><strong>Procesador:</strong> Chip A15 Bionic (Rendimiento ultrarrápido).</li>
+                    <li><strong>Almacenamiento:</strong> 128 GB.</li>
+                    <li><strong>Cámara:</strong> Sistema dual de 12 MP (Gran angular y Ultra gran angular).</li>
+                    <li><strong>Batería:</strong> Salud superior al 85%.</li>
+                    <li><strong>Conectividad:</strong> 5G compatible.</li>
+                </ul>
+            </div>
+
+            <button class="boton-compra-detalle" onclick="alert('Producto añadido')">Añadir al carrito</button>
+            <p style="font-size: 0.8rem; color: #666; margin-top: 15px;">📦 Envío gratuito a toda España (Península) | 🛡️ 1 Año de garantía TechConectJL</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechConectJL - Dos Hermanas, Sevilla</p>
+    </footer>
+
+</body>
+</html>

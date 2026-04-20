@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 17 - TechConectJL</title>
+    <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
+    <style>
+        :root {
+            --morado-principal: #6a1b9a;
+            --morado-claro: #f3e5f5;
+            --gris-suave: #f4f4f4;
+            --gris-texto: #888;
+            --texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--texto);
+            background-color: var(--gris-suave);
+            line-height: 1.6;
+        }
+
+        /* --- CABECERA --- */
+        header {
+            background-color: white;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid var(--morado-principal);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img { width: 150px; height: auto; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--texto);
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border-radius: 20px;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .producto-imagen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .producto-imagen img {
+            max-width: 100%;
+            max-height: 450px;
+            object-fit: contain;
+        }
+
+        /* --- INFO Y DETALLES --- */
+        .volver {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: var(--morado-principal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .grado-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+
+        h1 { color: var(--morado-principal); margin: 0 0 10px 0; font-size: 2rem; }
+
+        .precio-detalle {
+            font-size: 1.8rem;
+            color: var(--morado-principal);
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .especificaciones {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .especificaciones h3 { font-size: 1.1rem; margin-bottom: 15px; color: var(--morado-principal); }
+
+        .especificaciones ul { list-style: none; padding: 0; }
+
+        .especificaciones li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .especificaciones li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--morado-principal);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .boton-compra-detalle {
+            background-color: var(--morado-principal);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .boton-compra-detalle:hover { background-color: #4a148c; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; margin: 15px; padding: 15px; }
+            header { flex-direction: column; text-align: center; }
+            .producto-imagen img { max-height: 300px; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="img/techconectimg.jpg" alt="Logo TechConectJL"></a>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="sobrenosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">🛒</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="producto-imagen">
+            <img src="img/i17verdesalvia.webp" alt="iPhone 17">
+        </div>
+
+        <div class="producto-info">
+            <a href="catalogo.html" class="volver">← Volver al catálogo</a>
+            <br>
+            <span class="grado-badge">NUEVO - Último Modelo</span>
+            <h1>Apple iPhone 17</h1>
+            
+            <p>El iPhone 17 redefine la potencia con el nuevo chip A19. Un diseño ultra estilizado con la tecnología más avanzada de Apple Intelligence integrada de forma nativa.</p>
+
+            <div class="especificaciones">
+                <h3>Lo último en tecnología:</h3>
+                <ul>
+                    <li><strong>Procesador:</strong> Chip A13 Bionic de última generación (Eficiencia extrema).</li>
+                    <li><strong>Cámara Frontal:</strong> Sensor de 24 MP para selfies con nitidez profesional.</li>
+                    <li><strong>Pantalla:</strong> ProMotion de 120Hz ahora disponible en el modelo estándar.</li>
+                    <li><strong>Cámara Fusion:</strong> 48 MP con mejoras en fotografía computacional nocturna.</li>
+                    <li><strong>Capa antirreflejos:</strong> Nueva tecnología de pantalla para mejor visibilidad en exteriores.</li>
+                    <li><strong>Sostenibilidad:</strong> Fabricado con 100% de cobalto reciclado en la batería.</li>
+                </ul>
+            </div>
+
+            <button class="boton-compra-detalle" onclick="alert('Producto añadido al carrito')">Añadir al carrito</button>
+            
+            <div style="margin-top: 20px; font-size: 0.85rem; color: #555;">
+                <p>✅ <strong>Garantía:</strong> 3 años de garantía oficial.</p>
+                <p>🚚 <strong>Envío:</strong> Envío inmediato asegurado.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechConectJL - Dos Hermanas, Sevilla</p>
+    </footer>
+
+</body>
+</html>
