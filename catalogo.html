@@ -38,7 +38,6 @@
 
         header img {
             width: 150px;
-            /* Tamaño equilibrado */
             height: auto;
             display: block;
             transition: 0.3s;
@@ -95,13 +94,11 @@
         /* --- CATÁLOGO RESPONSIVE --- */
         .catalogo {
             display: grid;
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             padding: 20px 5%;
             max-width: 1200px;
             margin: 0 auto;
-
         }
 
         .producto {
@@ -124,7 +121,6 @@
         .producto img {
             width: 100%;
             height: 140px;
-            /* Altura fija para que todos los cards midan lo mismo */
             object-fit: contain;
             margin-bottom: 10px;
         }
@@ -133,7 +129,6 @@
             font-size: 0.95rem;
             margin: 10px 0;
             height: 40px;
-            /* Reserva espacio para 2 líneas de texto */
             overflow: hidden;
         }
 
@@ -144,20 +139,9 @@
             font-weight: bold;
         }
 
-        .grado-a {
-            background: #e8f5e9;
-            color: #2e7d32;
-        }
-
-        .grado-b {
-            background: #fff3e0;
-            color: #ef6c00;
-        }
-
-        .grado-c {
-            background: #ffebee;
-            color: #c62828;
-        }
+        .grado-a { background: #e8f5e9; color: #2e7d32; }
+        .grado-b { background: #fff3e0; color: #ef6c00; }
+        .grado-c { background: #ffebee; color: #c62828; }
 
         .precio {
             font-size: 1.3rem;
@@ -185,63 +169,21 @@
             font-size: 0.85rem;
         }
 
-        /* --- MEDIA QUERIES (EL TRUCO PARA EL MÓVIL) --- */
+        /* Enlaces de productos */
+        .producto a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 8px 2%;
-            }
-
-            header img {
-                width: 110px;
-                /* Logo más pequeño en móvil */
-                margin-bottom: 8px;
-            }
-
-            nav {
-                width: 100%;
-                justify-content: center;
-                overflow-x: auto;
-                /* Permite scroll lateral si el menú no cabe */
-                padding-bottom: 4px;
-            }
-
-            nav a {
-                padding: 6px 8px;
-                font-size: 0.75rem;
-                white-space: nowrap;
-            }
-
-            .hero {
-                padding: 25px 15px;
-            }
-
-            .hero h2 {
-                font-size: 1.4rem;
-            }
-
-            .catalogo {
-                grid-template-columns: repeat(2, 1fr);
-                /* FUERZA 2 COLUMNAS EN MÓVIL */
-                gap: 10px;
-                padding: 10px;
-            }
-
-            .producto {
-                padding: 10px;
-            }
-
-            .producto img {
-                height: 110px;
-            }
-
-            .producto h3 {
-                font-size: 0.85rem;
-            }
-
-            .precio {
-                font-size: 1.1rem;
-            }
+            header { flex-direction: column; padding: 8px 2%; }
+            header img { width: 110px; margin-bottom: 8px; }
+            nav { width: 100%; justify-content: center; overflow-x: auto; padding-bottom: 4px; }
+            nav a { padding: 6px 8px; font-size: 0.75rem; white-space: nowrap; }
+            .catalogo { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px; }
+            .producto img { height: 110px; }
+            .precio { font-size: 1.1rem; }
         }
 
         footer {
@@ -274,15 +216,15 @@
         <h2>Tecnología accesible para todos</h2>
         <p>Móviles reacondicionados con garantía y revisión técnica.</p>
     </section>
+
     <h2 id="movil">Móviles</h2>
     <main class="catalogo">
 
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Excelente</span><br><br>
-                <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg"
-                    alt="iPhone 13">
-                <h3>iPhone 13 128GB</h3>
+                <a href="iphone13.html"><img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/2100000316561_1.jpg" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>iPhone 13 128GB</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">450€</span>
                 </div>
@@ -307,8 +249,7 @@
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado C - Bueno</span><br>
-                <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1617015539.48364882.png"
-                    alt="Xiaomi Mi 11">
+                <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1617015539.48364882.png" alt="Xiaomi Mi 11">
                 <h3>Xiaomi Mi 11 Lite</h3>
                 <div class="contenedor-precio">
                     <span class="precio">180€</span>
@@ -321,9 +262,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado C - Bueno</span><br>
-                <img src="img/i12azul.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 12 128GB Azul</h3>
+                <a href="iphone12.html"><img src="img/i12azul.webp" alt="iPhone 12"></a>
+                <a href="iphone12.html"><h3>Apple iPhone 12 128GB Azul</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">224.24€</span>
                 </div>
@@ -335,9 +275,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B - Muy bueno</span><br>
-                <img src="img/i12azul.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 12 128GB Azul</h3>
+                <a href="iphone12.html"><img src="img/i12azul.webp" alt="iPhone 12"></a>
+                <a href="iphone12.html"><h3>Apple iPhone 12 128GB Azul</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">224.24€</span>
                 </div>
@@ -349,79 +288,73 @@
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado C - Bueno</span><br>
-                <img src="img/i12blanco.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 12 128GB Blanco</h3>
+                <a href="iphone12.html"><img src="img/i12blanco.webp" alt="iPhone 12"></a>
+                <a href="iphone12.html"><h3>Apple iPhone 12 128GB Blanco</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">224.24€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Azul', 224.24)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Blanco', 224.24)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado C - Bueno</span><br>
-                <img src="img/i12negro.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 12 128GB Negro</h3>
+                <a href="iphone12.html"><img src="img/i12negro.webp" alt="iPhone 12"></a>
+                <a href="iphone12.html"><h3>Apple iPhone 12 128GB Negro</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">224.24€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Azul', 224.24)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Negro', 224.24)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B - Muy bueno</span><br>
-                <img src="img/i12negro.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 12 128GB Negro</h3>
+                <a href="iphone12.html"><img src="img/i12negro.webp" alt="iPhone 12"></a>
+                <a href="iphone12.html"><h3>Apple iPhone 12 128GB Negro</h3></a>
                 <div class="contenedor-precio">
-                    <span class="precio">222.86</span>
+                    <span class="precio">222.86€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Azul', 224.24)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Negro', 222.86)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B - Muy bueno</span><br>
-                <img src="img/i12rojo.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 12 128GB Rojo (PRODUCT)RED</h3>
+                <a href="iphone12.html"><img src="img/i12rojo.webp" alt="iPhone 12"></a>
+                <a href="iphone12.html"><h3>Apple iPhone 12 128GB Rojo (PRODUCT)RED</h3></a>
                 <div class="contenedor-precio">
-                    <span class="precio">222.86</span>
+                    <span class="precio">222.86€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Azul', 224.24)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Rojo', 222.86)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B/C - Bueno</span><br>
-                <img src="img/i12verde.jpg"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 12 128GB Verde</h3>
+                <a href="iphone12.html"><img src="img/i12verde.jpg" alt="iPhone 12"></a>
+                <a href="iphone12.html"><h3>Apple iPhone 12 128GB Verde</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">209.71€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Azul', 224.24)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 12 128GB Verde', 209.71)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B+ - Muy Bueno</span><br>
-                <img src="img/i12verde.jpg"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 12 128GB Verde</h3>
+                <a href="iphone12.html"><img src="img/i12verde.jpg" alt="iPhone 12"></a>
+                <a href="iphone12.html"><h3>Apple iPhone 12 128GB Verde</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">222.86€</span>
                 </div>
@@ -433,11 +366,10 @@
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B+ - Muy Bueno</span><br>
-                <img src="img/i12prografito.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 12 Pro 128GB Grafito</h3>
+                <a href="iphone12.html"><img src="img/i12prografito.webp" alt="iPhone 12 Pro"></a>
+                <a href="iphone12.html"><h3>Apple iPhone 12 Pro 128GB Grafito</h3></a>
                 <div class="contenedor-precio">
-                    <span class="precio">269.08</span>
+                    <span class="precio">269.08€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
@@ -447,9 +379,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B+ - Muy Bueno</span><br>
-                <img src="img/i13azul.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 128GB Azul</h3>
+                <a href="iphone13.html"><img src="img/i13azul.webp" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 128GB Azul</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">324.43€</span>
                 </div>
@@ -461,23 +392,21 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i13blanco.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 128GB Blanco Estrella</h3>
+                <a href="iphone13.html"><img src="img/i13blanco.webp" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 128GB Blanco Estrella</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">337.50€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 13 128GB Blanco Estrella', 337.50)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 13 128GB Blanco', 337.50)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B/C - Bueno</span><br>
-                <img src="img/i13medianoche.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 128GB Medianoche</h3>
+                <a href="iphone13.html"><img src="img/i13medianoche.webp" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 128GB Medianoche</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">311.37€</span>
                 </div>
@@ -489,9 +418,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Muy Bueno</span><br>
-                <img src="img/i13medianoche.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 128GB Medianoche</h3>
+                <a href="iphone13.html"><img src="img/i13medianoche.webp" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 128GB Medianoche</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">337.50€</span>
                 </div>
@@ -503,37 +431,34 @@
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B/C - Bueno</span><br>
-                <img src="img/i13rojo.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 128GB Rojo (PRODUCT)RED</h3>
+                <a href="iphone13.html"><img src="img/i13rojo.webp" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 128GB Rojo (PRODUCT)RED</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">311.37€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 13 128GB Rojo (PRODUCT)RED', 311.37)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 13 128GB Rojo', 311.37)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B/C - Bueno</span><br>
-                <img src="img/i13rojo.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 128GB Rojo (PRODUCT)RED</h3>
+                <a href="iphone13.html"><img src="img/i13rojo.webp" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 128GB Rojo (PRODUCT)RED</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">324.43€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 13 128GB Rojo (PRODUCT)RED', 324.43)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 13 128GB Rojo', 324.43)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B/C - Bueno</span><br>
-                <img src="img/i13verde.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 128GB Verde</h3>
+                <a href="iphone13.html"><img src="img/i13verde.webp" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 128GB Verde</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">311.37€</span>
                 </div>
@@ -545,9 +470,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B+ - Bueno</span><br>
-                <img src="img/i13verde.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 256GB Verde</h3>
+                <a href="iphone13.html"><img src="img/i13verde.webp" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 256GB Verde</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">324.43€</span>
                 </div>
@@ -559,9 +483,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B/C - Bueno</span><br>
-                <img src="img/i13azul.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 512GB Azul</h3>
+                <a href="iphone13.html"><img src="img/i13azul.webp" alt="iPhone 13"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 512GB Azul</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">398.49€</span>
                 </div>
@@ -573,9 +496,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i13proazulsierra.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 Pro 128GB Azul Sierra</h3>
+                <a href="iphone13.html"><img src="img/i13proazulsierra.webp" alt="iPhone 13 Pro"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 Pro 128GB Azul Sierra</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">389.78€</span>
                 </div>
@@ -587,9 +509,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i13prografito.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 Pro 256GB Grafito</h3>
+                <a href="iphone13.html"><img src="img/i13prografito.webp" alt="iPhone 13 Pro"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 Pro 256GB Grafito</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">420.27€</span>
                 </div>
@@ -601,9 +522,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B+ - Muy bueno</span><br>
-                <img src="img/i13prografito.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 Pro Max 256GB Grafito</h3>
+                <a href="iphone13.html"><img src="img/i13prografito.webp" alt="iPhone 13 Pro Max"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 Pro Max 256GB Grafito</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">393.07€</span>
                 </div>
@@ -615,9 +535,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i13promaxplata.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 13 Pro Max 256GB Plata</h3>
+                <a href="iphone13.html"><img src="img/i13promaxplata.webp" alt="iPhone 13 Pro Max"></a>
+                <a href="iphone13.html"><h3>Apple iPhone 13 Pro Max 256GB Plata</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">463.83€</span>
                 </div>
@@ -629,9 +548,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i14promaxnegroespacial.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 14 Pro Max 256GB Negro Espacial</h3>
+                <a href="iphone14.html"><img src="img/i14promaxnegroespacial.webp" alt="iPhone 14 Pro Max"></a>
+                <a href="iphone14.html"><h3>Apple iPhone 14 Pro Max 256GB Negro Espacial</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">590.17€</span>
                 </div>
@@ -643,9 +561,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B+ - Muy bueno</span><br>
-                <img src="img/i14promaxnegroespacial.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 14 Pro Max 256GB Negro Espacial</h3>
+                <a href="iphone14.html"><img src="img/i14promaxnegroespacial.webp" alt="iPhone 14 Pro Max"></a>
+                <a href="iphone14.html"><h3>Apple iPhone 14 Pro Max 256GB Negro Espacial</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">781.84€</span>
                 </div>
@@ -657,9 +574,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i15negro.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 15 128GB Negro</h3>
+                <a href="iphone15.html"><img src="img/i15negro.webp" alt="iPhone 15"></a>
+                <a href="iphone15.html"><h3>Apple iPhone 15 128GB Negro</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">520.47€</span>
                 </div>
@@ -671,9 +587,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i15protitanio.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 15 Pro 128GB Titanio Natural</h3>
+                <a href="iphone15.html"><img src="img/i15protitanio.webp" alt="iPhone 15 Pro"></a>
+                <a href="iphone15.html"><h3>Apple iPhone 15 Pro 128GB Titanio Natural</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">620.66€</span>
                 </div>
@@ -685,24 +600,21 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i15protitanioazul.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 15 Pro Max 256GB Titanio Azul</h3>
+                <a href="iphone15.html"><img src="img/i15protitanioazul.webp" alt="iPhone 15 Pro Max"></a>
+                <a href="iphone15.html"><h3>Apple iPhone 15 Pro Max 256GB Titanio Azul</h3></a>
                 <div class="contenedor-precio">
-                    <span class="precio">703.43.66€</span>
-                    <span class="precio-antes">235€</span>
+                    <span class="precio">703.66€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 15 Pro Max 256GB Titanio Azul', 703.43.66)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 15 Pro Max 256GB Titanio Azul', 703.66)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i15promaxtitanioblanco.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 15 Pro Max 256GB Titanio Blanco</h3>
+                <a href="iphone15.html"><img src="img/i15promaxtitanioblanco.webp" alt="iPhone 15 Pro Max"></a>
+                <a href="iphone15.html"><h3>Apple iPhone 15 Pro Max 256GB Titanio Blanco</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">703.43€</span>
                 </div>
@@ -714,9 +626,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i15promaxtitanionegro.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 15 Pro Max 256GB Titanio Negro</h3>
+                <a href="iphone15.html"><img src="img/i15promaxtitanionegro.webp" alt="iPhone 15 Pro Max"></a>
+                <a href="iphone15.html"><h3>Apple iPhone 15 Pro Max 256GB Titanio Negro</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">703.43€</span>
                 </div>
@@ -728,9 +639,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-b">Grado B+ - Muy Bueno</span><br>
-                <img src="img/i15promaxtitanionegro.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 15 Pro Max 256GB Titanio Negro</h3>
+                <a href="iphone15.html"><img src="img/i15promaxtitanionegro.webp" alt="iPhone 15 Pro Max"></a>
+                <a href="iphone15.html"><h3>Apple iPhone 15 Pro Max 256GB Titanio Negro</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">790.55€</span>
                 </div>
@@ -742,9 +652,8 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i16protitanionegro.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 16 Pro 256GB Titanio Negro</h3>
+                <a href="iphone16.html"><img src="img/i16protitanionegro.webp" alt="iPhone 16 Pro"></a>
+                <a href="iphone16.html"><h3>Apple iPhone 16 Pro 256GB Titanio Negro</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">834.12€</span>
                 </div>
@@ -756,35 +665,33 @@
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i16eblanco.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 16e 128GB Blanco NUEVO ABIERTO</h3>
+                <a href="iphone16.html"><img src="img/i16eblanco.webp" alt="iPhone 16e"></a>
+                <a href="iphone16.html"><h3>Apple iPhone 16e 128GB Blanco NUEVO ABIERTO</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">524.82€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 16e 128GB Blanco NUEVO ABIERTO', 524.82)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 16e 128GB Blanco', 524.82)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Perfecto</span><br>
-                <img src="img/i17verdesalvia.webp"
-                    alt="Xiaomi Mi 11">
-                <h3>Apple iPhone 17 256GB Verde Salvia NUEVO</h3>
+                <a href="iphone17.html"><img src="img/i17verdesalvia.webp" alt="iPhone 17"></a>
+                <a href="iphone17.html"><h3>Apple iPhone 17 256GB Verde Salvia NUEVO</h3></a>
                 <div class="contenedor-precio">
                     <span class="precio">829.76€</span>
                 </div>
                 <p>Marcas visibles, gran ahorro</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 17 256GB Verde Salvia NUEVO', 829.76)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple iPhone 17 256GB Verde Salvia', 829.76)">Añadir al carrito</button>
         </article>
 
     </main>
+
     <h2 id="Tablets">Tablets</h2>
     <main class="catalogo">
-
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado B+ </span>
@@ -794,7 +701,7 @@
                     <span class="precio">280,87€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('MacBook Pro 13', 1200)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad 10th Gen', 280.87)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -806,8 +713,7 @@
                     <span class="precio">590.17€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('PC Gaming - GREED MK2 AMD', 999)">Añadir al
-                carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 2', 590.17)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -819,7 +725,7 @@
                     <span class="precio">276.52€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 4 Azul', 276.52)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -831,7 +737,7 @@
                     <span class="precio">276.52€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 4 Oro Rosa', 276.52)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -843,10 +749,10 @@
                     <span class="precio">285.23€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 4 Plata', 285.23)">Añadir al carrito</button>
         </article>
 
-         <article class="producto">
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/verde.avif">
@@ -855,7 +761,7 @@
                     <span class="precio">285.23€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 4 Verde', 285.23)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -867,10 +773,10 @@
                     <span class="precio">354.93€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 5 64GB Gris', 354.93)">Añadir al carrito</button>
         </article>
 
-         <article class="producto">
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado A</span><br>
                 <img src="img/grisespacial.webp">
@@ -879,7 +785,7 @@
                     <span class="precio">407.20€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 5 256GB Gris', 407.20)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -891,7 +797,7 @@
                     <span class="precio">407.20€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 5 256GB Purpura', 407.20)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -903,7 +809,7 @@
                     <span class="precio">354.93€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 5 64GB Blanco', 354.93)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -915,7 +821,7 @@
                     <span class="precio">372.35€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 5 64GB Gris A', 372.35)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -927,7 +833,7 @@
                     <span class="precio">420.27€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 5 Azul 5G', 420.27)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -939,7 +845,7 @@
                     <span class="precio">367.99€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 5 Gris 5G', 367.99)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -951,7 +857,7 @@
                     <span class="precio">367.99€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 5 Purpura 5G', 367.99)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -963,10 +869,10 @@
                     <span class="precio">367.99€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 5 Rosa 5G', 367.99)">Añadir al carrito</button>
         </article>
 
-         <article class="producto">
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/miniplata.webp">
@@ -975,19 +881,19 @@
                     <span class="precio">503.04€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Mini 2', 503.04)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/grispro.webp">
-                <h3>Apple iPad Pro 10,5 (2017) 256GB Wifi + 4G Grsi Espacial</h3>
+                <h3>Apple iPad Pro 10,5 (2017) 256GB Wifi + 4G Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">215.53€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 10.5', 215.53)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -999,7 +905,7 @@
                     <span class="precio">216.32€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 11 2020', 216.32)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -1011,7 +917,7 @@
                     <span class="precio">507.39€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 11 2021', 507.39)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -1023,10 +929,10 @@
                     <span class="precio">585.81€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 11 2022 Gris', 585.81)">Añadir al carrito</button>
         </article>
 
-          <article class="producto">
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado A</span><br>
                 <img src="img/platapro4th.jpg">
@@ -1035,7 +941,7 @@
                     <span class="precio">585.81€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 11 2022 Plata', 585.81)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -1047,10 +953,10 @@
                     <span class="precio">611.94€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
-        
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 11 256GB Gris', 611.94)">Añadir al carrito</button>
         </article>
-         <article class="producto">
+
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado A</span><br>
                 <img src="img/grispro114th.png">
@@ -1059,11 +965,10 @@
                     <span class="precio">638.08€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 11 256GB 5G', 638.08)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/negro5th.webp">
@@ -1072,11 +977,10 @@
                     <span class="precio">807.98€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 11 M4 256GB', 807.98)">Añadir al carrito</button>
         </article>
 
-         </article>
-         <article class="producto">
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado A</span><br>
                 <img src="img/negro5th.webp">
@@ -1085,11 +989,10 @@
                     <span class="precio">842.62€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 11 M4 512GB', 842.62)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado A</span><br>
                 <img src="img/gripro12.jpg">
@@ -1098,11 +1001,10 @@
                     <span class="precio">572.74€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 1TB', 572.74)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/gripro12.jpg">
@@ -1111,279 +1013,253 @@
                     <span class="precio">546.60€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 1TB B+', 546.60)">Añadir al carrito</button>
         </article>
 
-         </article>
-         <article class="producto">
+        <article class="producto">
             <div>
                 <span class="grado grado-c">Grado A</span><br>
                 <img src="img/gris125th.webp">
-                <h3>Apple iPad Pro 12,9 (2021) 5th Generación 128GB  Gris Espacial</h3>
+                <h3>Apple iPad Pro 12,9 (2021) 5th Generación 128GB Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">568.38€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 5th 128GB', 568.38)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B+ </span><br>
+                <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/gris125th.webp">
-                <h3>Apple iPad Pro 12,9 (2021) 5th Generación 128GB  Gris Espacial</h3>
+                <h3>Apple iPad Pro 12,9 (2021) 5th Generación 128GB Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">516.11€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 5th 128GB B+', 516.11)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado A </span><br>
+                <span class="grado grado-c">Grado A</span><br>
                 <img src="img/platapreo5th.jpg">
                 <h3>Apple iPad Pro 12,9 (2021) 5th Generación 128GB Plata</h3>
                 <div class="contenedor-precio">
                     <span class="precio">551.38€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 5th Plata', 551.38)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado A </span><br>
+                <span class="grado grado-c">Grado A</span><br>
                 <img src="img/gris125th.webp">
                 <h3>Apple iPad Pro 12,9 (2021) 5th Generación 128GB Wifi + 5G Cellular Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">590.38€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 5th 5G', 590.38)">Añadir al carrito</button>
         </article>
 
-         </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado A </span><br>
+                <span class="grado grado-c">Grado A</span><br>
                 <img src="img/platapreo5th.jpg">
                 <h3>Apple iPad Pro 12,9 (2021) 5th Generación 128GB Wifi + 5G Cellular Plata</h3>
                 <div class="contenedor-precio">
                     <span class="precio">590.38€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 5th 5G Plata', 590.38)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B+ </span><br>
+                <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/gris125th.webp">
                 <h3>Apple iPad Pro 12,9 (2021) 5th Generación 256GB Wifi + 5G Cellular Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">585.81€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 256GB 5G', 585.81)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B/C </span><br>
+                <span class="grado grado-c">Grado B/C</span><br>
                 <img src="img/platapreo5th.jpg">
                 <h3>Apple iPad Pro 12,9 (2021) 5th Generación 256GB Wifi + 5G Cellular Plata</h3>
                 <div class="contenedor-precio">
                     <span class="precio">558.60€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 256GB 5G Plata', 558.60)">Añadir al carrito</button>
         </article>
 
-         </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado A </span><br>
+                <span class="grado grado-c">Grado A</span><br>
                 <img src="img/grispro114th.png">
                 <h3>Apple iPad Pro 12,9 (2022) 6th Generación 128GB Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">659.87€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 6th 128GB', 659.87)">Añadir al carrito</button>
         </article>
 
-         </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado A </span><br>
+                <span class="grado grado-c">Grado A</span><br>
                 <img src="img/platapreo5th.jpg">
                 <h3>Apple iPad Pro 12,9 (2022) 6th Generación 256GB Plata</h3>
                 <div class="contenedor-precio">
                     <span class="precio">729.57€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 6th 256GB', 729.57)">Añadir al carrito</button>
         </article>
 
-         </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B/C </span><br>
+                <span class="grado grado-c">Grado B/C</span><br>
                 <img src="img/grispro114th.png">
                 <h3>Apple iPad Pro 12,9 (2022) 6th Generación 512GB Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">659.87€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 6th 512GB', 659.87)">Añadir al carrito</button>
         </article>
 
-         </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado A </span><br>
+                <span class="grado grado-c">Grado A</span><br>
                 <img src="img/grispro114th.png">
                 <h3>Apple iPad Pro 12,9 (2022) 6th Generación 512GB Wifi + 5G Cellular Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">810.84€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Pro 12.9 6th 512GB 5G', 810.84)">Añadir al carrito</button>
         </article>
 
-          </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B/C </span><br>
+                <span class="grado grado-c">Grado B/C</span><br>
                 <img src="img/ipadazul6thwebp.webp">
                 <h3>iPad Air 11 (2024) M2 6th Generación 128GB Azul</h3>
                 <div class="contenedor-precio">
                     <span class="precio">468.19€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 11 M2 Azul', 468.19)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B/C </span><br>
+                <span class="grado grado-c">Grado B/C</span><br>
                 <img src="img/ipadgris6th.webp">
                 <h3>iPad Air 11 (2024) M2 6th Generación 128GB Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">468.19€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 11 M2 Gris', 468.19)">Añadir al carrito</button>
         </article>
 
-         </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B+ </span><br>
+                <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/ipadgris6th.webp">
                 <h3>iPad Air 11 (2024) M2 6th Generación 128GB Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">468.19€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 11 M2 Gris B+', 468.19)">Añadir al carrito</button>
         </article>
 
-         </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B+ </span><br>
+                <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/ipadpurpura6th.jpg">
                 <h3>iPad Air 11 (2024) M2 6th Generación 256GB Púrpura</h3>
                 <div class="contenedor-precio">
                     <span class="precio">568.38€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 11 M2 Purpura', 568.38)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B/C </span><br>
+                <span class="grado grado-c">Grado B/C</span><br>
                 <img src="img/ipad13gris.jpg">
                 <h3>iPad Air 13 (2024) M2 6th Generación 128GB Wifi + 5G Cellular Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">546.60€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 13 M2 5G', 546.60)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado A </span><br>
+                <span class="grado grado-c">Grado A</span><br>
                 <img src="img/ipad13gris.jpg">
                 <h3>iPad Air 13 (2024) M2 6th Generación 128GB Wifi + 5G Cellular Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">572.74€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 13 M2 5G A', 572.74)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B+ </span><br>
+                <span class="grado grado-c">Grado B+</span><br>
                 <img src="img/ipad13gris.jpg">
                 <h3>iPad Air 13 (2024) M2 6th Generación 128GB Wifi + 5G Cellular Gris Espacial</h3>
                 <div class="contenedor-precio">
                     <span class="precio">559.67€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 13 M2 5G B+', 559.67)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado A </span><br>
+                <span class="grado grado-c">Grado A</span><br>
                 <img src="img/ipadpurpura6th.jpg">
                 <h3>iPad Air 13 (2024) M2 6th Generación 128GB Wifi + 5G Cellular Púrpura</h3>
                 <div class="contenedor-precio">
                     <span class="precio">572.74€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 13 M2 Purpura 5G', 572.74)">Añadir al carrito</button>
         </article>
 
-        </article>
-         <article class="producto">
+        <article class="producto">
             <div>
-                <span class="grado grado-c">Grado B </span><br>
+                <span class="grado grado-c">Grado B</span><br>
                 <img src="img/ipadpurpura7th.webp">
                 <h3>iPad Air 13 (2025) M3 7th Generación 128GB Wifi + 5G Cellular Púrpura</h3>
                 <div class="contenedor-precio">
                     <span class="precio">633.73€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('ASUS Vivobook 15', 399)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad Air 13 M3 5G', 633.73)">Añadir al carrito</button>
         </article>
 
-
-
-
-
-
     </main>
-    <h2 id="reloj">Smart Wacht</h2>
 
+    <h2 id="reloj">Smart Watch</h2>
     <main class="catalogo">
-
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado B/C</span>
@@ -1393,8 +1269,7 @@
                     <span class="precio">293.94€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Apple Watch Series 6', 350)">Añadir al
-                carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Apple Watch S10 42mm', 293.94)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -1702,7 +1577,7 @@
                 <span class="grado grado-c">Grado A</span><br>
                 <img src="img/smart42alumnionegro.avif"
                     alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 42mm Aluminio Negro</h3>
+                <h3>Apple Watch Series 10 42mm Aluminio Negr</h3>
                 <div class="contenedor-precio">
                     <span class="precio">307.47€</span>
                 </div>
@@ -1710,408 +1585,6 @@
             <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
         </article>
 
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Nuevi Abierto</span><br>
-                <img src="img/smart42alumnionegro.avif"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 42mm Aluminio Negro</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">324.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smart42alumnionegro.avif"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 42mm Aluminio Negro</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">293.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B/C</span><br>
-                <img src="img/smart42orosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 42mm Aluminio Oro Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">276.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado A</span><br>
-                <img src="img/smart42orosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 42mm Aluminio Oro Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">307.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smart42orosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 42mm Aluminio Oro Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">293.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B/C</span><br>
-                <img src="img/smart42plata.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 42mm Aluminio Plata</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">276.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B/C</span><br>
-                <img src="img/smart42alumnionegro.avif"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 46mm Aluminio Negro</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">293.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smart42alumnionegro.avif"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 46mm Aluminio Negro</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">311.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B/C</span><br>
-                <img src="img/smart42orosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 46mm Aluminio Oro Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">289.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado A</span><br>
-                <img src="img/smart42orosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 46mm Aluminio Oro Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">307.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado A</span><br>
-                <img src="img/smart42plata.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 46mm Aluminio Plata</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">307.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smart42plata.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 10 46mm Aluminio Plata</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">293.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smart11negro.webp"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 11 (GPS + Cellular) 46mm Aluminio Negro</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">385.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smartaceroigrafito.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 41mm Acero Inoxidable Grafito</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">369.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-           <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smartaceroioro.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 41mm Acero Inoxidable Oro</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">369.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B/C</span><br>
-                <img src="img/smartaceroiplata.webp"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 41mm Acero Inoxidable Plata</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">358.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smartaluminiorojo9.webp"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 41mm Aluminio Rojo</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">327.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-        
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B/C</span><br>
-                <img src="img/9rosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 41mm Aluminio Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">250.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado A</span><br>
-                <img src="img/9rosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 41mm Aluminio Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">254.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/9rosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 41mm Aluminio Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">237.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado A</span><br>
-                <img src="img/smartaceroigrafito.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Acero Inoxidable Grafito</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">387.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smartaceroigrafito.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Acero Inoxidable Grafito</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">396.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smartaceroigrafito.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Aluminio Blanco Estrella</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">241.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/smartaceroigrafito.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Aluminio Blanco Estrella</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">241.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B/C</span><br>
-                <img src="img/medianoche.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Aluminio Medianoche</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">241.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/medianoche.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Aluminio Medianoche</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">228.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-         <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+</span><br>
-                <img src="img/medianoche.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Aluminio Medianoche</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">228.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado A </span><br>
-                <img src="img/smartaluminiorojo9.webp"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Aluminio Rojo</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">228.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado A</span><br>
-                <img src="img/9rosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Aluminio Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">259.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-          <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+ </span><br>
-                <img src="img/9rosa.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 (GPS + Cellular) 45mm Aluminio Rosa</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">241.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
-
-        <article class="producto">
-            <div>
-                <span class="grado grado-c">Grado B+ </span><br>
-                <img src="img/blancoestrella.jpg"
-                    alt="Xiaomi Mi Watch">
-                <h3>Apple Watch Series 9 41mm Aluminio Blanco Estrella</h3>
-                <div class="contenedor-precio">
-                    <span class="precio">228.47€</span>
-                </div>
-            </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Xiaomi Mi Watch', 120)">Añadir al carrito</button>
-        </article>
 
 
 
@@ -2133,26 +1606,20 @@
 
 
 
-
-
-
-
-
-    </main>
+        </main>
 
     <h2 id="accesorios">Accesorios</h2>
     <main class="catalogo">
-
         <article class="producto">
             <div>
                 <span class="grado grado-a">Grado A - Excelente</span><br><br>
-                <img src="img/appleairpods2021estuchemagsafe.webp" alt="Apple Airpods 2021 con estuche MagSafe">
+                <img src="img/appleairpods2021estuchemagsafe.webp" alt="Airpods">
                 <h3>Apple Airpods (2021) con estuche MagSafe</h3>
                 <div class="contenedor-precio">
                     <span class="precio">171,97€</span>
                 </div>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Cascos', 450)">Añadir al carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('Airpods 2021', 171.97)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
@@ -2163,34 +1630,30 @@
                 <div class="contenedor-precio">
                     <span class="precio">280,87€</span>
                 </div>
-                <p>100% Funcional</p>
             </div>
-            <button class="boton-compra" onclick="añadirAlCarrito('Auriculares inalámbrico', 320)">Añadir al
-                carrito</button>
+            <button class="boton-compra" onclick="añadirAlCarrito('iPad 10th Azul', 280.87)">Añadir al carrito</button>
         </article>
 
         <article class="producto">
             <div>
                 <span class="grado grado-c">Grado C - Bueno</span><br><br>
-                <img src="https://m.media-amazon.com/images/I/61XvTTfpJpL._AC_SL1500_.jpg" alt="JBL Tune 720BT">
+                <img src="https://m.media-amazon.com/images/I/61XvTTfpJpL._AC_SL1500_.jpg" alt="JBL">
                 <h3>JBL Tune 720BT</h3>
                 <div class="contenedor-precio">
                     <span class="precio">180€</span>
                     <span class="precio-antes">235€</span>
                 </div>
-                <p>Marcas visibles, gran ahorro</p>
             </div>
             <button class="boton-compra" onclick="añadirAlCarrito('JBL Tune 720BT', 180)">Añadir al carrito</button>
         </article>
     </main>
+
     <footer>
         <p>&copy; 2026 TechConectJL - Dos Hermanas, Sevilla</p>
         <p>Contribuyendo a la economía circular y la sostenibilidad</p>
     </footer>
 
+    <script type="module" src="app.js"></script>
 </body>
-
-
-<script type="module" src="app.js"></script>
 
 </html>
