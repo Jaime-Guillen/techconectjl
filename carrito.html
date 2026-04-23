@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="img/techconectimg.jpg">
     <style>
         :root {
-            --morado-principal: #6a1b9a; 
+            --morado-principal: #6a1b9a;
             --morado-claro: #f3e5f5;
             --gris-suave: #f4f4f4;
             --gris-texto: #888;
@@ -29,7 +30,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-bottom: 3px solid var(--morado-principal);
             position: sticky;
             top: 0;
@@ -71,8 +72,15 @@
             padding: 30px 20px;
         }
 
-        .hero h2 { margin: 0; font-size: 1.8rem; }
-        .hero p { margin: 10px 0 0; opacity: 0.9; }
+        .hero h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .hero p {
+            margin: 10px 0 0;
+            opacity: 0.9;
+        }
 
         /* --- CONTENIDO DEL CARRITO --- */
         .contenedor-carrito {
@@ -81,10 +89,15 @@
             padding: 25px;
             background: white;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
-        h3 { color: var(--morado-principal); border-bottom: 2px solid var(--morado-claro); padding-bottom: 10px; margin-top: 0; }
+        h3 {
+            color: var(--morado-principal);
+            border-bottom: 2px solid var(--morado-claro);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
 
         table {
             width: 100%;
@@ -104,8 +117,17 @@
             border-bottom: 1px solid #eee;
         }
 
-        .producto-info { display: flex; align-items: center; gap: 15px; }
-        .producto-info img { width: 50px; height: 50px; object-fit: contain; }
+        .producto-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .producto-info img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
 
         .total-container {
             text-align: right;
@@ -136,8 +158,16 @@
             text-align: center;
         }
 
-        .btn-finalizar { background-color: var(--morado-principal); color: white; }
-        .btn-seguir { background-color: white; color: var(--morado-principal); border: 2px solid var(--morado-principal); }
+        .btn-finalizar {
+            background-color: var(--morado-principal);
+            color: white;
+        }
+
+        .btn-seguir {
+            background-color: white;
+            color: var(--morado-principal);
+            border: 2px solid var(--morado-principal);
+        }
 
         /* --- MEDIA QUERIES (MÓVIL) --- */
         @media (max-width: 768px) {
@@ -164,24 +194,71 @@
                 white-space: nowrap;
             }
 
-            .hero h2 { font-size: 1.5rem; }
-            .contenedor-carrito { margin: 15px; padding: 15px; }
-
-            /* Tabla responsive: convertir filas en bloques/tarjetas */
-            table, thead, tbody, th, td, tr { display: block; }
-            thead tr { position: absolute; top: -9999px; left: -9999px; }
-            tr { border: 1px solid #eee; margin-bottom: 15px; border-radius: 10px; padding: 10px; }
-            td { border: none; position: relative; padding-left: 50%; text-align: right; font-size: 0.9rem; }
-            
-            td:before { 
-                content: attr(data-label); 
-                position: absolute; left: 10px; font-weight: bold; color: var(--morado-principal);
+            .hero h2 {
+                font-size: 1.5rem;
             }
 
-            .producto-info { justify-content: flex-end; }
-            .total-container { font-size: 1.2rem; text-align: center; }
-            .acciones-carrito { flex-direction: column-reverse; }
-            .btn { width: 100%; padding: 15px; }
+            .contenedor-carrito {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            /* Tabla responsive: convertir filas en bloques/tarjetas */
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                border: 1px solid #eee;
+                margin-bottom: 15px;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+                font-size: 0.9rem;
+            }
+
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+                color: var(--morado-principal);
+            }
+
+            .producto-info {
+                justify-content: flex-end;
+            }
+
+            .total-container {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            .acciones-carrito {
+                flex-direction: column-reverse;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 15px;
+            }
         }
 
         footer {
@@ -194,6 +271,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -216,22 +294,13 @@
 
     <main class="contenedor-carrito">
         <h3>Resumen de compra</h3>
-
         <div id="carrito-contenido"></div>
-
-        <div class="total-container">
-            Total: 450€
-        </div>
-
-        <div class="acciones-carrito">
-            <a href="catalogo.html" class="btn btn-seguir">Seguir Comprando</a>
-            <button class="btn btn-finalizar" onclick="alert('¡Gracias por tu confianza! Redirigiendo al pago...')">Finalizar Compra</button>
-        </div>
     </main>
 
     <footer>
         <p>© 2026 TechConectJL - Dos Hermanas, Sevilla</p>
     </footer>
-<script src="js/carrito.js"></script>
+    <script src="js/carrito.js"></script>
 </body>
+
 </html>
